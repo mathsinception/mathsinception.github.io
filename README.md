@@ -23,7 +23,7 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | Upcoming programme details | `programmes.html` | `id="upcoming"` |
 | Past programmes | `programmes.html` | `archive-entry` |
 | Colours, fonts, spacing and width | `assets/styles.css` | `:root` |
-| Header logo | `assets/logo.svg` | Replace the file |
+| Header logo | `assets/logo.png` | Replace the file |
 | Browser-tab icon | Both HTML files | `rel="icon"` |
 | Navigation and footer | Both HTML files | `main-nav` and `site-footer` |
 | Search-result titles and descriptions | Each HTML file | `<title>` and `name="description"` |
@@ -34,8 +34,8 @@ Search for `EDIT:` in the HTML files to find the intended editing points. HTML c
 
 The `mi` monogram is a dummy logo, not a finished identity.
 
-- If your logo is SVG, replace `assets/logo.svg` with your new SVG.
-- If your logo is PNG, put it at `assets/logo.png` and change `src="assets/logo.svg"` to `src="assets/logo.png"` in **both** HTML files.
+- Replace the logo file at `assets/logo.png` with your own PNG artwork.
+- Update the logo image `src` in both HTML files to `assets/logo.png` if needed.
 - The logo is alongside the trust's full name, so its empty `alt` attribute is intentional: screen readers already get the brand name.
 - The browser-tab icon is a separate embedded SVG in each page. To replace it, save `assets/favicon.png` and replace the existing icon link in both pages with:
 
