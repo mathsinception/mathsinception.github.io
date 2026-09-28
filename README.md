@@ -1,6 +1,6 @@
 # Mathematical Inception Trust — website editing guide
 
-A small, independent website made with **plain HTML and CSS**. You can edit every part in VS Code. There is no framework, JavaScript, package installation, build command, database, paid template, or external font dependency. The website works by opening `index.html` in a browser. You do not need ChatGPT to make or publish changes.
+A small, independent website made with **plain HTML and CSS**. You can edit every part in VS Code. There is no framework, JavaScript, package installation, build command, database, paid template, or external font dependency. The website works by opening `index.html` in a browser. 
 
 ## Start here
 
@@ -30,9 +30,8 @@ The ZIP places website files at its root. In the hosted project's source checkou
 
 Search for `EDIT:` in the HTML files to find the intended editing points. HTML comments look like `<!-- this -->` and are not visible on the page. Change visible text between tags; keep the surrounding tags intact. Use `&amp;` for an ampersand and `&lt;` for a literal less-than sign inside text.
 
-## Replace the temporary logo
 
-The `mi` monogram is a dummy logo, not a finished identity.
+
 
 - Replace the logo file at `assets/logo.png` with your own PNG artwork.
 - Update the logo image `src` in both HTML files to `assets/logo.png` if needed.
