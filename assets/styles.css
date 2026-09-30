@@ -44,7 +44,7 @@ p { margin-bottom: 1.15rem; }
 .site-header { border-top: 5px solid var(--navy); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; min-height: 122px; padding-block: 1.5rem; }
 .brand { display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--navy); }
-.brand-logo { flex: 0 0 56px; width: 56px; height: 56px; object-fit: contain; }
+.brand-logo { flex: 0 0 90px; width: 90px; height: 90px; object-fit: contain; }
 .brand-text { font-family: var(--serif); font-size: 1.5rem; line-height: 1.2; }
 .brand-text > span { display: block; font-size: 1.1rem; margin-top: .3rem; }
 .main-nav { display: flex; align-items: center; flex-wrap: wrap; column-gap: 2rem; row-gap: .5rem; }
@@ -142,7 +142,7 @@ p { margin-bottom: 1.15rem; }
 @media (max-width: 440px) {
   .container { width: calc(100% - 2.25rem); }
   .brand { gap: .8rem; }
-  .brand-logo { flex-basis: 44px; width: 44px; height: 44px; }
+  .brand-logo { flex-basis: 70px; width: 70px; height: 70px; }
   .brand-text { font-size: 1.16rem; }
   .brand-text > span { font-size: 1rem; }
   .programme-facts { grid-template-columns: 1fr; }
