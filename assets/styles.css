@@ -86,7 +86,7 @@ p { margin-bottom: 1.15rem; }
 .approach-list p { margin-bottom: 0; color: var(--muted); }
 .pending-notice { background: var(--wash); border-left: 2px solid var(--line); padding: 1.1rem 1.4rem; }
 .pending-notice p { margin: 0; color: var(--muted); }
-.trustee { padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+.trustee { padding-block: 1.25rem; border-bottom: none; }
 .trustee:last-child { border-bottom: 0; }
 .trustee-role { color: var(--muted); font-size: .9375rem; margin-bottom: .5rem; }
 
