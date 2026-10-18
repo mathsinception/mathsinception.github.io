@@ -28,7 +28,7 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | Colours, fonts, spacing and width | `assets/styles.css` | `:root` |
 | Header logo | `assets/logo.png` | Replace the file |
 | Browser-tab icon | Both HTML files | `rel="icon"` |
-| Navigation and footer | Both HTML files | `main-nav` and `site-footer` |
+| Navigation and footer | The relevant HTML page | `main-nav` and `site-footer` |
 | Search-result titles and descriptions | Each HTML file | `<title>` and `name="description"` |
 
 Search for `EDIT:` in the HTML files to find the intended editing points. HTML comments look like `<!-- this -->` and are not visible on the page. Change visible text between tags; keep the surrounding tags intact. Use `&amp;` for an ampersand and `&lt;` for a literal less-than sign inside text.
