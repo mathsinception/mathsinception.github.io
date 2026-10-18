@@ -42,23 +42,28 @@ p { margin-bottom: 1.15rem; }
 
 /* SHARED HEADER: keep the navigation the same in both HTML files. */
 .site-header { border-top: 5px solid var(--navy); border-bottom: 1px solid var(--line); }
+.home-page .site-header { border-bottom: 0; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; min-height: 122px; padding-block: 1.5rem; }
+.home-page .header-inner { justify-content: center; padding-top: 3rem; }
 .brand { display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--navy); }
 .brand-logo { flex: 0 0 90px; width: 90px; height: 90px; object-fit: contain; }
+.home-page .brand { flex-direction: column; gap: 2rem; }
+.home-page .brand-logo { flex-basis: 140px; width: 140px; height: 140px; }
 .brand-text { font-family: var(--serif); font-size: 1.5rem; line-height: 1.2; }
 .brand-text > span { display: block; font-size: 1.1rem; margin-top: .3rem; }
+.home-page .brand-text { margin: 0; font-size: clamp(2.25rem, 4vw, 3.5rem); text-align: center; }
 .main-nav { display: flex; align-items: center; flex-wrap: wrap; column-gap: 2rem; row-gap: .5rem; }
 .main-nav a { padding-block: .6rem; color: var(--muted); text-decoration: none; font-size: .9375rem; }
 .main-nav a:hover { color: var(--navy); }
 .main-nav a[aria-current="page"] { color: var(--navy); box-shadow: 0 2px var(--navy); }
 
 /* INTRODUCTION */
-.home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 275px; gap: 4rem; align-items: center; padding-block: 4.6rem; border-bottom: 1px solid var(--line); }
+.home-intro { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding-block: 4.6rem; border-bottom: 1px solid var(--line); }
 .intro-text { max-width: 38rem; font-size: 1.125rem; color: var(--muted); line-height: 1.75; }
-.announcement { padding: 1.5rem 0 1.5rem 1.6rem; border-left: 2px solid var(--navy); }
-.announcement .eyebrow { margin-bottom: .8rem; }
-.announcement h2 { font-size: 1.75rem; margin-bottom: .9rem; }
-.announcement p:not(.eyebrow) { font-size: .9375rem; color: var(--muted); }
+.announcement { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.5rem; padding: 0; }
+.announcement .eyebrow { margin-bottom: 0; }
+.announcement h2 { font-size: 1.75rem; margin-bottom: 0; }
+.announcement p:not(.eyebrow) { margin-bottom: 0; font-size: .9375rem; color: var(--muted); }
 .announcement a { font-size: .875rem; }
 .page-intro { padding-block: 3.75rem 3rem; border-bottom: 1px solid var(--line); }
 .page-intro .intro-text { margin-bottom: 0; }
@@ -146,7 +151,7 @@ p { margin-bottom: 1.15rem; }
 /* TABLET AND MOBILE */
 @media (max-width: 1000px) {
   .container { width: calc(100% - 3rem); }
-  .home-intro { gap: 2.5rem; grid-template-columns: minmax(0, 1fr) 230px; }
+  .home-intro { gap: 2.5rem; grid-template-columns: 1fr; }
   .page-layout { grid-template-columns: minmax(0, 1fr); }
   .main-nav { column-gap: 1.4rem; }
   .brand-text { font-size: 1.3rem; }
@@ -154,11 +159,14 @@ p { margin-bottom: 1.15rem; }
 }
 @media (max-width: 760px) {
   .header-inner { align-items: flex-start; flex-direction: column; gap: 1.25rem; padding-block: 1.25rem; }
+  .home-page .header-inner { align-items: center; padding-top: 2.25rem; }
   .brand-text { font-size: 1.4rem; }
+  .home-page .brand-text { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+  .home-page .brand-logo { flex-basis: 120px; width: 120px; height: 120px; }
   .main-nav { gap: .5rem 2rem; }
   .main-nav a { padding-block: .45rem; }
   .home-intro { grid-template-columns: 1fr; gap: 2.25rem; padding-block: 3rem; }
-  .announcement { padding-block: .2rem; padding-left: 1.25rem; }
+  .announcement { padding-block: .2rem; }
   .announcement p { max-width: 28rem; }
   .page-intro { padding-block: 3rem 2.5rem; }
   .page-layout { grid-template-columns: 1fr; gap: 0; }
@@ -175,6 +183,8 @@ p { margin-bottom: 1.15rem; }
   .brand-logo { flex-basis: 70px; width: 70px; height: 70px; }
   .brand-text { font-size: 1.16rem; }
   .brand-text > span { font-size: 1rem; }
+  .home-page .brand-text { font-size: 1.5rem; }
+  .home-page .brand-logo { flex-basis: 100px; width: 100px; height: 100px; }
   .programme-facts { grid-template-columns: 1fr; }
   .programme-facts > div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: .75rem; }
   .programme-facts dt { margin: 0; }
