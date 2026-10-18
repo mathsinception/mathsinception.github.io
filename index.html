@@ -22,7 +22,7 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="programmes.html">Programmes</a>
-        <a href="#trustees">Trustees</a>
+        <a href="trustees.html">Trustees</a>
       </nav>
     </div>
   </header>
@@ -38,23 +38,24 @@
       </div>
       <aside class="announcement" aria-labelledby="announcement-title">
         <p class="eyebrow">Upcoming programmes</p>
-        <h2 id="announcement-title">The next chapter</h2>
-        <!-- EDIT: Replace this notice when the next programme is confirmed. -->
-        <p>Details of our next programme will be announced here.</p>
+        <h2 id="announcement-title">Mathematical Inception 2027 (MI2027)</h2>
+        <p>at Dharapuram, Tamil Nadu</p>
         <a href="programmes.html#upcoming">Programme announcements <span aria-hidden="true">→</span></a>
       </aside>
     </section>
 
     <div class="page-layout">
       <aside class="page-sidebar">
-        <nav aria-label="On this page">
-          <p class="eyebrow">On this page</p>
-          <a href="#about">Who we are</a>
-          <a href="#our-programmes">Our programmes</a>
-          <a href="#our-approach">How we learn</a>
-          <a href="#trustees">Trustees</a>
-        </nav>
-        <!-- <p class="sidebar-note">Introspect.<br>Experiment.<br>Discover.</p> -->
+        <details class="page-index">
+          <summary>On this page</summary>
+          <nav aria-label="On this page">
+            <a href="#about">Who we are</a>
+            <a href="#our-programmes">Our programmes</a>
+            <a href="#our-approach">How we learn</a>
+            <a href="#videos">Videos</a>
+            <a href="#student-reflection">Student reflections</a>
+          </nav>
+        </details>
       </aside>
 
       <div class="page-content">
@@ -96,44 +97,36 @@
           </div>
         </section>
 
-        <section id="trustees" class="content-section" aria-labelledby="trustees-title">
-          <p class="section-label">04 / About the trust</p>
-          <h2 id="trustees-title">What is MI Trust?</h2>
-          <!-- EDIT: Remove this notice and uncomment/duplicate the trustee block below. -->
-           <p> The Mathematical Inception (MI) Trust is a non-profit educational trust. </p>
-          
-          <article class="trustee">
-            <h3>Arusha C.</h3>
-            <p class="trustee-role">President</p>
-            <p>A short biography.</p>
-          </article>
-          <article class="trustee">
-            <h3>Harith M.</h3>
-            <p class="trustee-role">Secretary</p>
-            <p>A short biography </p>
-          </article>
-          <article class="trustee">
-            <h3>Elanchearan R. S.</h3>
-            <p class="trustee-role">Treasurer</p>
-            <p>A short biography </p>
-          </article>
-          <article class="trustee">
-            <h3>Omkar Javadekar</h3>
-            <p class="trustee-role">Academic Coordinator</p>
-            <p>A short biography </p>
-          </article>
-          <article class="trustee">
-            <h3>Ananthnarayan H.</h3>
-            <p class="trustee-role">Trustee</p>
-            <p>A short biography </p>
-          </article>
-          <article class="trustee">
-            <h3>Meghana Bhat</h3>
-            <p class="trustee-role">Trustee</p>
-            <p>A short biography </p>
-          </article>
-         
+        <section id="videos" class="content-section" aria-labelledby="videos-label">
+          <p class="section-label" id="videos-label">From previous programmes</p>
+          <div class="video-grid">
+            <article class="video-tile">
+              <h3>Feedback from MI2024</h3>
+              <a class="video-link" href="https://www.youtube.com/watch?v=6QwhrWKupJM" target="_blank" rel="noopener noreferrer" aria-label="Watch Insights from Mathematical Inception 2024: student experiences and feedback on YouTube">
+                <img src="https://i.ytimg.com/vi/6QwhrWKupJM/hqdefault.jpg" alt="" loading="lazy">
+                <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
+              </a>
+            </article>
+            <article class="video-tile">
+              <h3>Previous session highlights</h3>
+              <a class="video-link" href="https://www.youtube.com/watch?v=KGhNlAYpxmU" target="_blank" rel="noopener noreferrer" aria-label="Watch Mathematical Inception 2023 session highlights on YouTube">
+                <img src="https://i.ytimg.com/vi/KGhNlAYpxmU/hqdefault.jpg" alt="" loading="lazy">
+                <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
+              </a>
+            </article>
+          </div>
         </section>
+
+        <section id="student-reflection" class="content-section" aria-labelledby="reflection-title">
+          <p class="section-label">Student voices</p>
+          <h2 id="reflection-title">A participant's reflection</h2>
+          <article class="student-story">
+            <h3>Mathematics, Musings, and Memories: Our Reflection of Mathematical Inception 2024</h3>
+            <p>Two students reflect on how MI2024 shaped their experience of learning, confidence and themselves.</p>
+            <a href="https://medium.com/@jananyajanathkumar/mathematics-musings-and-memories-our-reflection-of-mathematical-inception-2024-08b35c5bec61" target="_blank" rel="noopener noreferrer">Read the students' story on Medium <span aria-hidden="true">↗</span></a>
+          </article>
+        </section>
+
       </div>
     </div>
   </main>

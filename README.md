@@ -18,10 +18,13 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | --- | --- | --- |
 | Homepage introduction and mission | `index.html` | `Homepage introduction` or `id="about"` |
 | Programme overview on the homepage | `index.html` | `id="our-programmes"` |
-| Trustees and biographies | `index.html` | `TRUSTEE TEMPLATE` |
+| Trust members, affiliations and roles | `trustees.html` | `class="trustee-list"` |
 | Homepage's next-programme notice | `index.html` | `announcement-title` |
+| Homepage video tiles | `index.html` | `id="videos"` |
+| Student article feature | `index.html` | `id="student-reflection"` |
 | Upcoming programme details | `programmes.html` | `id="upcoming"` |
 | Past programmes | `programmes.html` | `archive-entry` |
+| Past programme details and photos | `programme-YYYY.html` | `id="overview"` or `id="photos"` |
 | Colours, fonts, spacing and width | `assets/styles.css` | `:root` |
 | Header logo | `assets/logo.png` | Replace the file |
 | Browser-tab icon | Both HTML files | `rel="icon"` |
@@ -29,6 +32,12 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | Search-result titles and descriptions | Each HTML file | `<title>` and `name="description"` |
 
 Search for `EDIT:` in the HTML files to find the intended editing points. HTML comments look like `<!-- this -->` and are not visible on the page. Change visible text between tags; keep the surrounding tags intact. Use `&amp;` for an ampersand and `&lt;` for a literal less-than sign inside text.
+
+The homepage's video tiles link to public YouTube videos and use YouTube-hosted thumbnails. Update each thumbnail URL and matching video link together when replacing a video. The video opens on YouTube only when selected.
+
+The homepage's student reflection links to an external Medium article; update the linked title and summary if replacing it.
+
+Pages with section navigation use a native collapsible “On this page” menu. Select the heading to show or hide its section links.
 
 
 
@@ -44,17 +53,16 @@ Search for `EDIT:` in the HTML files to find the intended editing points. HTML c
 
 ## Add trustees
 
-In `index.html`, find `id="trustees"`. Delete the `pending-notice` block, then uncomment the trustee template by removing its surrounding `<!-- ... -->` markers. Replace its text. Duplicate the whole `<article class="trustee">...</article>` block for each additional trustee. The number of trustees is unrestricted.
+In `trustees.html`, find `class="trustee-list"`. Each member is one `<li class="trustee">` within the list. Add the member's name in an `<h3>`, put a known affiliation after the name, and put the role on the following line. Copy an existing `<li>` to add another member.
 
 ```html
-<article class="trustee">
-  <h3>Replace with the trustee's name</h3>
-  <p class="trustee-role">Replace with their role</p>
-  <p>Replace with a short, approved biography.</p>
-</article>
+<li class="trustee">
+  <h3>Member name <span class="trustee-affiliation">— Institution</span></h3>
+  <p class="trustee-role">Role</p>
+</li>
 ```
 
-You can add a link to a trustee's public profile within their biography. Only add personal contact information that the person has approved for publication.
+Do not publish unconfirmed personal details or affiliations.
 
 ## Announce an upcoming programme
 
@@ -82,9 +90,9 @@ When a programme ends, move its record into the archive and update both upcoming
 
 ## Add a past programme
 
-In `programmes.html`, find `class="archive-list"`. Copy one complete `<article class="archive-entry">...</article>` block and paste it at the top of that list. Update the year, edition, title, date, `href`, and `aria-label`. Newest entries should appear first.
+Each past programme has its own local page. The archive in `programmes.html` links to those pages. Add edition-specific details in the overview section of the corresponding page. To add another edition, create a page using the same structure and add a matching archive entry with a local `href`. Keep newest editions first.
 
-If you want full programme details on your own website, duplicate `programmes.html` into a new file such as `programme-2026.html`, keep the shared header and stylesheet link, replace the main content, and link to it with `href="programme-2026.html"`. Update its title, description, on-page navigation, and IDs together. No routing configuration is required for `.html` pages.
+To add photos, replace the `photo-placeholder-frame` in that edition's `photos` section with an image, for example `<img src="assets/mi2026-workshop.jpg" alt="A concise description of the photo">`. Put the approved photo in `assets/` and write accurate alternative text.
 
 ## Change the appearance
 
@@ -117,7 +125,7 @@ Use the photograph's actual width and height, and ensure it is approved for publ
 
 ## Publish independently and connect a domain
 
-The website files can be uploaded to any host that serves static HTML. Upload **`index.html`, `programmes.html`, and the `assets/` folder together**. Do not upload just the HTML files, or styling and the logo will be missing. There is no build command. The ZIP root is the publish directory; for the hosted source checkout, use `dist/`.
+The website files can be uploaded to any host that serves static HTML. Upload all `.html` pages and the `assets/` folder together. Do not upload just some of the HTML files, or local programme links may break; do not omit the assets, or styling and the logo will be missing. There is no build command. The ZIP root is the publish directory; for the hosted source checkout, use `dist/`.
 
 One option is Cloudflare Pages with Direct Upload. Consult its official instructions for the current upload procedure:
 
@@ -140,21 +148,15 @@ A private review copy made during this conversation is separate from independent
 
 - Review and approve the homepage mission and approach wording; it is draft copy based on the programme description.
 - Replace the temporary logo and browser-tab icon.
-- Add the actual trustees, roles and approved biographies.
+- Confirm any remaining trust-member roles and affiliations before publishing.
 - Add confirmed upcoming dates, venue, eligibility and application information.
-- Check the original Notion archive links in a signed-out browser, or replace them with local programme pages once you have the source content.
+- Add verified dates, venues, programme details and approved photos to each past-edition page.
 - Add any contact or trust-registration details you wish to publish. None have been invented.
 
 ## Sources and limitations
 
-The trust name and its public charitable status were supplied by you. The programme summary, Class 10 audience, residential format, free participation, and 1–6 May 2026 announcement were recovered from the indexed public Mathematical Inception overview:
-
-https://elanmath.notion.site/Mathematical-Inception-e758d06073354f299e9b3e184e109934?pvs=21
-
-That overview links to the 2023, 2024 and 2025 programme pages. Their exact link targets are preserved in the archive. The 2026 link is the URL you supplied. Those individual Notion pages could not be retrieved reliably during creation, so their full content, images, venue details, schedules, participant lists and application information have not been migrated. Verify those external pages before public launch.
-
-The 2026 programme date is in the past as of the preparation date, 28 September 2026, so it appears in the archive. This is a historical announcement, not an independently verified event report; no outcomes, attendance figures, affiliations, testimonials or impact statistics have been invented.
+The programme summary, Class 10 audience, residential format, free participation and 2026 date are the details currently recorded on this website. Edition-specific dates, venues, schedules, participant information, photos and outcomes should be added only after they are verified and approved for publication. No event outcomes or impact claims have been invented.
 
 The IIT Bombay personal-page reference could not be loaded reliably. This is an original, restrained academic design made from scratch, not a pixel-for-pixel reproduction or an assertion about the reference site's implementation.
 
-Validation during preparation covered the two HTML pages, internal links, anchor targets, asset references, page titles, document language, unique IDs and image alternative attributes. The available environment did not support an interactive browser preview for this plain static project; please check the downloaded site in your own desktop and mobile browser before making it public.
+Check all six HTML pages, their local links, page titles and images in a desktop and mobile browser before making the site public.
