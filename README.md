@@ -33,6 +33,8 @@ The ZIP places website files at its root. In the hosted project's source checkou
 
 Search for `EDIT:` in the HTML files to find the intended editing points. HTML comments look like `<!-- this -->` and are not visible on the page. Change visible text between tags; keep the surrounding tags intact. Use `&amp;` for an ampersand and `&lt;` for a literal less-than sign inside text.
 
+The stylesheet links include a version query (for example, `assets/styles.css?v=20261018-1`) to prevent browsers from reusing an older cached stylesheet after an update. Whenever you change `assets/styles.css`, update the version in every HTML page's stylesheet link to a new value before publishing. Keep the version identical across all pages.
+
 The homepage's video tiles link to public YouTube videos and use YouTube-hosted thumbnails. Update each thumbnail URL and matching video link together when replacing a video. The video opens on YouTube only when selected.
 
 The homepage's student reflection links to an external Medium article; update the linked title and summary if replacing it.
