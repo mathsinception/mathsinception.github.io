@@ -95,6 +95,18 @@ Each past programme has its own local page. The archive in `programmes.html` lin
 
 To add photos, replace the `photo-placeholder-frame` in that edition's `photos` section with an image, for example `<img src="assets/mi2026-workshop.jpg" alt="A concise description of the photo">`. Put the approved photo in `assets/` and write accurate alternative text.
 
+## Create a programme page from the template
+
+`_templates/mi-programme-page-template.html` contains every block a programme page can use: edition status, about, key facts, programme content, beyond mathematics, resource persons, advisors, registration, partners, photos, videos, student reflections and contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
+
+1. Copy the template to the website root as `programme-YYYY.html` (add the place if a year has two editions, for example `programme-2026-ppec-bengaluru.html`).
+2. Replace every `REPLACE:` value with confirmed details.
+3. Delete the optional blocks the edition does not need. Each block runs from its `BLOCK` comment to its `END BLOCK` comment. Also delete its link under "On this page".
+4. Search the new page for `REPLACE:`. Nothing should be left.
+5. Add a matching `archive-entry` in `programmes.html`, newest first.
+
+The comment at the top of the template lists suggested blocks for upcoming and completed editions. Every block uses the existing styles, so no stylesheet change is needed.
+
 ## Change the appearance
 
 The top of `assets/styles.css` has design variables shared by both pages:
