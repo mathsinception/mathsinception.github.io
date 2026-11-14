@@ -5,70 +5,66 @@
   One page per edition. This folder starts with "_" so GitHub Pages does not
   publish it; the template itself never appears on the live website.
 
+  THE PAGE TELLS ONE STORY, IN THIS ORDER
+    Intro ............ what, where, when (one sentence)
+    1  About ......... what the workshop is, and the key facts
+    2  Programme ..... what participants learn
+    3  The week ...... what the days look like
+    4  People ........ who teaches, advises and supports it
+    5  Apply ......... how to join (upcoming editions)
+    6  Gallery ....... what it looked like (completed editions)
+    7  In their words  what students said (completed editions)
+    8  Contact ....... who to ask
+
   HOW TO USE
-  1. Copy this file to the website root and name it programme-YYYY.html
+  1. Copy this file to the website root as programme-YYYY.html
      (add a place if a year has two editions, e.g. programme-2026-ppec-bengaluru.html).
   2. Fill in every "REPLACE:" value. Use only confirmed, approved details.
-  3. Delete every OPTIONAL block the edition does not need: remove everything from
-     its "BLOCK" comment to its "END BLOCK" comment, AND its link under "On this page".
-  4. Never publish an empty block. If photos, quotes or videos are not ready yet,
+  3. Remove what the edition does not need. Each section runs from its "SECTION"
+     comment to its "END SECTION" comment; smaller optional parts inside a section
+     are marked "OPTIONAL PART". Also remove the section's link under "On this page".
+  4. Never publish an empty section. If photos, quotes or videos are not ready,
      wrap the whole section in an HTML comment so it stays in the file, hidden,
-     ready to switch on later (see programme-2026.html for an example).
+     ready to switch on later (programme-2026.html shows how).
   5. Check nothing is left to fill:   grep -n "REPLACE" programme-YYYY.html
   6. Add a matching archive-entry in programmes.html (newest first).
   7. If assets/styles.css has a newer ?v= value on the other pages, use the same one here.
 
-  BLOCKS (page order)                     REQUIRED / OPTIONAL
-   1  Head (title, description)           required
-   2  Site header and footer              required, do not edit
-   3  Page intro                          required
-   4  On this page                        required, keep links in step with blocks
-   5  Edition status                      optional  (upcoming editions)
-   6  About this edition                  required
-   7  Key facts                           required
-   8  In numbers                          optional  (completed editions)
-   9  Poster                              optional  (mainly upcoming editions)
-  10  What participants do                optional
-  11  The week                            optional
-  12  Beyond mathematics                  optional  (skip if "The week" covers it)
-  13  Resource persons                    optional
-  14  Advisors                            optional
-  15  Registration and selection          optional  (upcoming editions)
-  16  Partners and hosts                  optional
-  17  Photos                              optional  (completed editions)
-  18  Student voices (quotes)             optional  (completed editions)
-  19  Student feedback videos             optional  (completed editions)
-  20  Student reflections (article)       optional
-  21  Contact for this edition            optional
-
-  SUGGESTED SETS
-  Upcoming edition:   1-7, 9, 10, 12, 13, 15, 16, 21          status "Applications open"
-  Completed edition:  1-4, 6, 7, 8, 10, 11, 13, 16-21         no status panel needed
+  WHICH SECTIONS TO KEEP
+                     Upcoming edition        Completed edition
+    Status panel     yes                     no
+    1 About          yes                     yes  (past tense, add the numbers)
+    2 Programme      yes                     yes
+    3 The week       activities list         day-by-day list
+    4 People         yes                     yes
+    5 Apply          yes  (with poster)      no
+    6 Gallery        no                      yes
+    7 In their words no                      yes
+    8 Contact        yes                     optional
 
   STYLE RULES
-  - Every block uses classes that already exist in assets/styles.css. Do not add
-    new classes or inline styles; the site's look is shared across all pages.
+  - Use only the classes already in assets/styles.css. No new classes, no inline styles.
   - Write for a parent or student seeing the programme for the first time:
     short, factual sentences, no superlatives, no emojis. Use &amp; for "&".
+  - Each section has a small label (what kind of section) and a heading that says
+    something specific. Do not repeat the label in the heading.
   - Link to forms and maps with ordinary links; do not embed them.
-  - Images go in assets/ named miYYYY-what.jpg, resized to about 1600 px on the
-    long side, with accurate alt text and their real width and height.
+  - Images go in assets/ named miYYYY-what.jpg, about 1600 px on the long side,
+    with accurate alt text and their real width and height.
 -->
 <html lang="en">
 <head>
-  <!-- ===== BLOCK 1: Head · REQUIRED ===== -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>REPLACE: Mathematical Inception YYYY | Mathematical Inception Trust</title>
-  <meta name="description" content="REPLACE: One sentence, e.g. The fifth edition of Mathematical Inception, held at VENUE from DATES.">
+  <meta name="description" content="REPLACE: One sentence, e.g. The fifth edition of Mathematical Inception: a six-day residential mathematics workshop at VENUE, D–D Month YYYY.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/styles.css?v=20261114-11">
-  <!-- ===== END BLOCK 1 ===== -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== BLOCK 2: Site header · REQUIRED · do not edit ===== -->
+  <!-- Site header: identical on every programme page. Do not edit. -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
@@ -81,218 +77,163 @@
       </nav>
     </div>
   </header>
-  <!-- ===== END BLOCK 2 (header) ===== -->
 
   <main id="main" class="container">
-    <!-- ===== BLOCK 3: Page intro · REQUIRED =====
-         The intro line is one plain sentence: format, place and dates. -->
+    <!-- ===== INTRO · REQUIRED =====
+         Eyebrow: edition number and year. Intro line: one plain sentence. -->
     <header class="page-intro">
       <p class="eyebrow">REPLACE: Fifth edition · YYYY</p>
       <h1 id="page-title">REPLACE: Mathematical Inception YYYY</h1>
-      <p class="intro-text">REPLACE: A N-day residential workshop at VENUE, TOWN, D–D Month YYYY.</p>
+      <p class="intro-text">REPLACE: A six-day residential workshop at VENUE, TOWN, D–D Month YYYY.</p>
     </header>
-    <!-- ===== END BLOCK 3 ===== -->
+    <!-- ===== END INTRO ===== -->
 
     <div class="page-layout">
-      <!-- ===== BLOCK 4: On this page · REQUIRED =====
-           Keep one link per visible block, in the same order. -->
+      <!-- ===== ON THIS PAGE · REQUIRED =====
+           One link per section you keep, in page order. -->
       <aside class="page-sidebar">
         <details class="page-index">
           <summary>On this page</summary>
           <nav aria-label="On this page">
-            <a href="#overview">About this edition</a>
-            <a href="#facts">Key facts</a>
-            <a href="#poster">Poster</a>
-            <a href="#programme">What participants do</a>
+            <a href="#overview">About</a>
+            <a href="#programme">Programme</a>
             <a href="#week">The week</a>
-            <a href="#beyond">Beyond mathematics</a>
-            <a href="#people">Resource persons</a>
-            <a href="#advisors">Advisors</a>
-            <a href="#register">Registration</a>
-            <a href="#partners">Partners</a>
-            <a href="#photos">Photos</a>
-            <a href="#voices">Student voices</a>
-            <a href="#videos">Feedback videos</a>
-            <a href="#reflections">Student reflections</a>
+            <a href="#people">People</a>
+            <a href="#apply">Apply</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#voices">In their words</a>
             <a href="#contact">Contact</a>
             <a href="programmes.html#past">All past programmes</a>
           </nav>
         </details>
       </aside>
-      <!-- ===== END BLOCK 4 ===== -->
+      <!-- ===== END ON THIS PAGE ===== -->
 
       <div class="page-content">
-        <!-- ===== BLOCK 5: Edition status · OPTIONAL =====
-             For upcoming editions. One status: Applications open / Applications closed /
-             Selection list published. Not listed under "On this page". -->
+        <!-- ===== STATUS PANEL · UPCOMING EDITIONS ONLY =====
+             One status: Applications open / Applications closed / Selection list published. -->
         <section id="status" class="content-section" aria-label="Edition status">
           <div class="upcoming-panel">
             <span class="status-label">REPLACE: Applications open</span>
             <h3>REPLACE: Mathematical Inception YYYY (MIYYYY)</h3>
-            <p>REPLACE: One line, e.g. Applications close on D Month YYYY.</p>
-            <a href="#register">How to apply <span aria-hidden="true">↓</span></a>
+            <p>REPLACE: e.g. Applications close on D Month YYYY.</p>
+            <a href="#apply">How to apply <span aria-hidden="true">↓</span></a>
           </div>
         </section>
-        <!-- ===== END BLOCK 5 ===== -->
+        <!-- ===== END STATUS PANEL ===== -->
 
-        <!-- ===== BLOCK 6: About this edition · REQUIRED =====
+        <!-- ===== SECTION 1 · ABOUT · REQUIRED =====
              Paragraph 1: what the workshop is and how it teaches.
-             Paragraph 2: this edition, who hosted it and in collaboration with whom. -->
+             Paragraph 2: this edition: hosted by / in collaboration with whom.
+             Key facts: keep the rows that apply; they flow three to a row. -->
         <section id="overview" class="content-section" aria-labelledby="overview-title">
           <p class="section-label">About this edition</p>
           <h2 id="overview-title">Building foundations of mathematical thinking</h2>
           <p>REPLACE: What the workshop is and how it teaches.</p>
-          <p>REPLACE: This edition: where, when, hosted by / in collaboration with.</p>
-        </section>
-        <!-- ===== END BLOCK 6 ===== -->
-
-        <!-- ===== BLOCK 7: Key facts · REQUIRED =====
-             Six facts fill two rows. Delete "Apply by" for a completed edition and
-             use past tense ("Who could apply"). -->
-        <section id="facts" class="content-section" aria-labelledby="facts-title">
-          <p class="section-label">At a glance</p>
-          <h2 id="facts-title">Key facts</h2>
+          <p>REPLACE: This edition: where, when, in collaboration with whom.</p>
           <dl class="programme-facts">
             <div><dt>Dates</dt><dd>REPLACE: D–D Month YYYY</dd></div>
             <div><dt>Venue</dt><dd>REPLACE: Venue, Town<br><a href="REPLACE: Google Maps link" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></dd></div>
-            <div><dt>Format</dt><dd>REPLACE: Residential, N days</dd></div>
-            <div><dt>Who can apply</dt><dd>REPLACE: Students who have completed Class 10 in YYYY</dd></div>
-            <div><dt>Fee</dt><dd>REPLACE: Free. Food and accommodation are provided; students arrange their own travel.</dd></div>
+            <div><dt>Format</dt><dd>REPLACE: Fully residential, N days</dd></div>
+            <div><dt>Who can apply</dt><dd>REPLACE: Students who complete Class 10 in YYYY</dd></div>
+            <div><dt>Fee</dt><dd>REPLACE: Free, including food and accommodation. Students arrange their own travel.</dd></div>
+            <!-- OPTIONAL PART · upcoming editions -->
             <div><dt>Apply by</dt><dd>REPLACE: D Month YYYY</dd></div>
-          </dl>
-        </section>
-        <!-- ===== END BLOCK 7 ===== -->
-
-        <!-- ===== BLOCK 8: In numbers · OPTIONAL =====
-             Only confirmed figures. Three figures read best. Not listed under "On this page". -->
-        <section id="numbers" class="content-section" aria-labelledby="numbers-title">
-          <p class="section-label">In numbers</p>
-          <h2 id="numbers-title">REPLACE: MIYYYY in numbers</h2>
-          <dl class="programme-facts">
+            <!-- OPTIONAL PART · completed editions: confirmed figures only -->
             <div><dt>Students</dt><dd>REPLACE: N</dd></div>
             <div><dt>Schools</dt><dd>REPLACE: N</dd></div>
             <div><dt>Districts</dt><dd>REPLACE: N</dd></div>
           </dl>
         </section>
-        <!-- ===== END BLOCK 8 ===== -->
+        <!-- ===== END SECTION 1 ===== -->
 
-        <!-- ===== BLOCK 9: Poster · OPTIONAL =====
-             Sits right after the key facts: it is what readers share with friends and teachers.
-             Save a web copy (about 1000 px wide, JPG) as assets/miYYYY-poster.jpg and,
-             if available, the print version as assets/miYYYY-poster.pdf.
-             Use only a poster whose details are still correct. -->
-        <section id="poster" class="content-section" aria-labelledby="poster-title">
-          <p class="section-label">Share</p>
-          <h2 id="poster-title">Poster</h2>
-          <figure class="photo-placeholder">
-            <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">
-              <img src="REPLACE: assets/miYYYY-poster.jpg" alt="REPLACE: Mathematical Inception YYYY poster: dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
-            </a>
-            <figcaption>REPLACE: Announcement poster, Month YYYY. <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">Download the full-size poster</a></figcaption>
-          </figure>
-        </section>
-        <!-- ===== END BLOCK 9 ===== -->
-
-        <!-- ===== BLOCK 10: What participants do · OPTIONAL =====
-             Three strands of the mathematical content. Update the topics each year. -->
+        <!-- ===== SECTION 2 · PROGRAMME · REQUIRED =====
+             The three strands of the mathematics. Update the topics each year. -->
         <section id="programme" class="content-section" aria-labelledby="programme-title">
           <p class="section-label">The programme</p>
           <h2 id="programme-title">What participants do</h2>
           <div class="approach-list">
-            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>REPLACE: Topics, e.g. mathematical statements, sets, functions, divisibility.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>REPLACE: Topics, e.g. mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
             <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>REPLACE: e.g. Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
             <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>REPLACE: e.g. Observing patterns, making conjectures and proving them independently.</p></div></div>
           </div>
         </section>
-        <!-- ===== END BLOCK 10 ===== -->
+        <!-- ===== END SECTION 2 ===== -->
 
-        <!-- ===== BLOCK 11: The week · OPTIONAL =====
-             One line per day from the final timetable: highlights only, no clock times. -->
+        <!-- ===== SECTION 3 · THE WEEK · OPTIONAL =====
+             Upcoming edition: keep the activities list, delete the days.
+             Completed edition: keep the days (from the final timetable, highlights only,
+             no clock times), delete the activities list. -->
         <section id="week" class="content-section" aria-labelledby="week-title">
           <p class="section-label">The week</p>
-          <h2 id="week-title">Six days at the workshop</h2>
-          <p>REPLACE: One sentence on the daily rhythm, e.g. Each day had four sessions, each followed by discussion in small groups.</p>
+          <h2 id="week-title">REPLACE: Six days at the workshop</h2>
+          <p>REPLACE: The daily rhythm, e.g. Each day has four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
+          <!-- OPTIONAL PART · upcoming editions: activities -->
+          <ul>
+            <li>REPLACE: e.g. A guidance session on higher studies</li>
+            <li>REPLACE: e.g. A music concert and a movie night</li>
+            <li>REPLACE: e.g. Sports every evening</li>
+          </ul>
+          <!-- OPTIONAL PART · completed editions: one row per day -->
           <dl class="programme-facts">
             <div><dt>REPLACE: Fri, 1 May</dt><dd>REPLACE: Highlights</dd></div>
             <div><dt>REPLACE: Sat, 2 May</dt><dd>REPLACE: Highlights</dd></div>
             <div><dt>REPLACE: Sun, 3 May</dt><dd>REPLACE: Highlights</dd></div>
           </dl>
         </section>
-        <!-- ===== END BLOCK 11 ===== -->
+        <!-- ===== END SECTION 3 ===== -->
 
-        <!-- ===== BLOCK 12: Beyond mathematics · OPTIONAL ===== -->
-        <section id="beyond" class="content-section" aria-labelledby="beyond-title">
-          <p class="section-label">Beyond mathematics</p>
-          <h2 id="beyond-title">Life at the workshop</h2>
-          <ul>
-            <li>REPLACE: e.g. A guidance session on higher-studies opportunities</li>
-            <li>REPLACE: e.g. A music concert</li>
-            <li>REPLACE: e.g. A movie night</li>
-            <li>REPLACE: e.g. Daily sports</li>
-          </ul>
-        </section>
-        <!-- ===== END BLOCK 12 ===== -->
-
-        <!-- ===== BLOCK 13: Resource persons · OPTIONAL =====
-             Same numbered style as trustees.html: "Name - Affiliation", no titles.
-             List only people who actually taught. Delete "Guest speakers" if there are none. -->
+        <!-- ===== SECTION 4 · PEOPLE · REQUIRED =====
+             One person per line: "Name, Affiliation", no titles, separated by <br>.
+             For a completed edition, list only people who actually took part and change
+             the heading to "Who taught". Groups flow three to a row. -->
         <section id="people" class="content-section" aria-labelledby="people-title">
-          <p class="section-label">Resource persons</p>
+          <p class="section-label">People</p>
           <h2 id="people-title">Who teaches</h2>
-          <h3>Instructors</h3>
-          <ol class="trustee-list">
-            <li class="trustee">REPLACE: Name - Affiliation</li>
-            <li class="trustee">REPLACE: Name - Affiliation</li>
-          </ol>
-          <h3>Guest speakers</h3>
-          <ol class="trustee-list">
-            <li class="trustee">REPLACE: Name - Affiliation</li>
-          </ol>
+          <dl class="programme-facts">
+            <div><dt>Instructors</dt><dd>REPLACE: Name, Affiliation<br>REPLACE: Name, Affiliation</dd></div>
+            <!-- OPTIONAL PART -->
+            <div><dt>Guest speakers</dt><dd>REPLACE: Name, Affiliation</dd></div>
+            <!-- OPTIONAL PART -->
+            <div><dt>Advisors</dt><dd>REPLACE: Name, Affiliation</dd></div>
+            <!-- OPTIONAL PART · each partner and what they did -->
+            <div><dt>Host and sponsor</dt><dd>REPLACE: Partner, Town</dd></div>
+          </dl>
+          <!-- OPTIONAL PART · one sentence of thanks -->
+          <p>REPLACE: e.g. We thank PARTNER for hosting the workshop and making it free for every participant.</p>
         </section>
-        <!-- ===== END BLOCK 13 ===== -->
+        <!-- ===== END SECTION 4 ===== -->
 
-        <!-- ===== BLOCK 14: Advisors · OPTIONAL ===== -->
-        <section id="advisors" class="content-section" aria-labelledby="advisors-title">
-          <p class="section-label">Advisors</p>
-          <h2 id="advisors-title">Advisors</h2>
-          <ol class="trustee-list">
-            <li class="trustee">REPLACE: Name - Affiliation</li>
-          </ol>
-        </section>
-        <!-- ===== END BLOCK 14 ===== -->
-
-        <!-- ===== BLOCK 15: Registration and selection · OPTIONAL =====
-             For upcoming editions. Link to the form; do not embed it. -->
-        <section id="register" class="content-section" aria-labelledby="register-title">
+        <!-- ===== SECTION 5 · APPLY · UPCOMING EDITIONS ONLY =====
+             Link to the form; do not embed it. The poster sits here because this is
+             where readers decide to apply, and the poster is what they share.
+             Poster files: assets/miYYYY-poster.jpg (about 1000 px wide) and, if available,
+             assets/miYYYY-poster.pdf for printing. -->
+        <section id="apply" class="content-section" aria-labelledby="apply-title">
           <p class="section-label">Registration</p>
-          <h2 id="register-title">How to apply</h2>
-          <p>REPLACE: e.g. Students register through the application form. Seats are limited, and participants are selected using the criteria described in the form.</p>
-          <p>REPLACE: e.g. The selection list will be published on this page by D Month YYYY.</p>
+          <h2 id="apply-title">How to apply</h2>
+          <p>REPLACE: e.g. Students apply through the application form. Seats are limited, and participants are selected using the criteria described in the form.</p>
           <dl class="programme-facts">
             <div><dt>Apply by</dt><dd>REPLACE: D Month YYYY</dd></div>
-            <div><dt>Selection list</dt><dd>REPLACE: D Month YYYY</dd></div>
+            <div><dt>Selection list</dt><dd>REPLACE: Published on this page by D Month YYYY</dd></div>
+            <div><dt>Application form</dt><dd><a href="REPLACE: form link" target="_blank" rel="noopener noreferrer">Apply for REPLACE: MIYYYY <span aria-hidden="true">↗</span></a></dd></div>
           </dl>
-          <a class="text-link" href="REPLACE: form link" target="_blank" rel="noopener noreferrer">Apply for REPLACE: MIYYYY<span aria-hidden="true">↗</span></a>
+          <!-- OPTIONAL PART · poster -->
+          <figure class="photo-placeholder">
+            <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="REPLACE: assets/miYYYY-poster.jpg" alt="REPLACE: Mathematical Inception YYYY poster with dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
+            </a>
+            <figcaption>REPLACE: Poster for MIYYYY. <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">Download the full-size poster</a> to share or print.</figcaption>
+          </figure>
         </section>
-        <!-- ===== END BLOCK 15 ===== -->
+        <!-- ===== END SECTION 5 ===== -->
 
-        <!-- ===== BLOCK 16: Partners and hosts · OPTIONAL =====
-             One sentence per partner, saying what they did. To show a logo, put the file
-             in assets/ and add above the sentence:
-             <img src="assets/partner-logo.png" width="120" height="120" alt="PARTNER NAME logo"> -->
-        <section id="partners" class="content-section" aria-labelledby="partners-title">
-          <p class="section-label">Partners</p>
-          <h2 id="partners-title">With thanks to</h2>
-          <p>REPLACE: e.g. PARTNER, TOWN hosted the workshop and provided food and accommodation for all participants.</p>
-        </section>
-        <!-- ===== END BLOCK 16 ===== -->
-
-        <!-- ===== BLOCK 17: Photos · OPTIONAL =====
-             Approved photos of THIS edition only. Two or four photos in the grid read best:
-             a group photo first, then sessions and discussions. -->
-        <section id="photos" class="content-section" aria-labelledby="photos-title">
+        <!-- ===== SECTION 6 · GALLERY · COMPLETED EDITIONS =====
+             Approved photos of THIS edition only, two or four: a group photo first,
+             then sessions and discussions. -->
+        <section id="gallery" class="content-section" aria-labelledby="gallery-title">
           <p class="section-label">Gallery</p>
-          <h2 id="photos-title">REPLACE: Moments from MIYYYY</h2>
+          <h2 id="gallery-title">REPLACE: Moments from MIYYYY</h2>
           <div class="video-grid">
             <figure class="photo-placeholder">
               <img src="REPLACE: assets/miYYYY-group.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
@@ -304,17 +245,19 @@
             </figure>
           </div>
         </section>
-        <!-- ===== END BLOCK 17 ===== -->
+        <!-- ===== END SECTION 6 ===== -->
 
-        <!-- ===== BLOCK 18: Student voices · OPTIONAL =====
-             Two or four short quotes chosen from the transcribed feedback, used with the
-             student's (and for minors, a parent's) consent. Keep each quote to two or
-             three sentences, in the student's own words; mark any cut with "…".
-             Attribution: first name and town or school, never a full name and school together
-             unless the student has agreed to it. -->
+        <!-- ===== SECTION 7 · IN THEIR WORDS · COMPLETED EDITIONS =====
+             Quotes: two or four, chosen from the transcribed feedback, used with the
+             student's consent (and a parent's for minors). Two or three sentences in the
+             student's own words; mark any cut with "…". Attribute with first name and town
+             or school only, unless the student agreed to more.
+             Article card (optional): a longer piece written by students, e.g. on Medium.
+             Feedback videos (optional): this edition's videos on YouTube; change the video ID
+             in BOTH the link and the thumbnail. -->
         <section id="voices" class="content-section" aria-labelledby="voices-title">
           <p class="section-label">Student voices</p>
-          <h2 id="voices-title">What students said</h2>
+          <h2 id="voices-title">In their words</h2>
           <div class="video-grid">
             <article class="student-story">
               <p>“REPLACE: Quote.”</p>
@@ -323,20 +266,18 @@
             <article class="student-story">
               <p>“REPLACE: Quote.”</p>
               <p><strong>REPLACE: First name</strong>, REPLACE: Town or school</p>
+            </article>
+            <!-- OPTIONAL PART · article card -->
+            <article class="student-story">
+              <h3>REPLACE: Article title</h3>
+              <p>REPLACE: One-sentence summary.</p>
+              <a href="REPLACE: article link" target="_blank" rel="noopener noreferrer">Read the article <span aria-hidden="true">↗</span></a>
             </article>
           </div>
-        </section>
-        <!-- ===== END BLOCK 18 ===== -->
-
-        <!-- ===== BLOCK 19: Student feedback videos · OPTIONAL =====
-             This edition's feedback videos, uploaded to YouTube. Same markup as the homepage
-             tiles. Change the video ID in BOTH the link and the thumbnail. Two tiles per row. -->
-        <section id="videos" class="content-section" aria-labelledby="videos-title">
-          <p class="section-label">Feedback videos</p>
-          <h2 id="videos-title">REPLACE: Students on MIYYYY</h2>
+          <!-- OPTIONAL PART · feedback videos -->
           <div class="video-grid">
             <article class="video-tile">
-              <h3>REPLACE: Video title</h3>
+              <h3>REPLACE: Video title, e.g. Students on MIYYYY</h3>
               <a class="video-link" href="https://www.youtube.com/watch?v=REPLACE_VIDEO_ID" target="_blank" rel="noopener noreferrer" aria-label="REPLACE: Watch VIDEO TITLE on YouTube">
                 <img src="https://i.ytimg.com/vi/REPLACE_VIDEO_ID/hqdefault.jpg" alt="" loading="lazy">
                 <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
@@ -344,23 +285,10 @@
             </article>
           </div>
         </section>
-        <!-- ===== END BLOCK 19 ===== -->
+        <!-- ===== END SECTION 7 ===== -->
 
-        <!-- ===== BLOCK 20: Student reflections (article) · OPTIONAL =====
-             For a longer piece written by students, e.g. on Medium. -->
-        <section id="reflections" class="content-section" aria-labelledby="reflections-title">
-          <p class="section-label">Student reflections</p>
-          <h2 id="reflections-title">In their words</h2>
-          <article class="student-story">
-            <h3>REPLACE: Article title</h3>
-            <p>REPLACE: One-sentence summary.</p>
-            <a href="REPLACE: article link" target="_blank" rel="noopener noreferrer">REPLACE: Read the article <span aria-hidden="true">↗</span></a>
-          </article>
-        </section>
-        <!-- ===== END BLOCK 20 ===== -->
-
-        <!-- ===== BLOCK 21: Contact for this edition · OPTIONAL =====
-             Contact details can differ for each edition. Delete the Phone line if not needed. -->
+        <!-- ===== SECTION 8 · CONTACT · OPTIONAL =====
+             Contact details can change from one edition to the next. -->
         <section id="contact" class="content-section" aria-labelledby="contact-title">
           <p class="section-label">Questions</p>
           <h2 id="contact-title">Contact</h2>
@@ -369,12 +297,12 @@
             <div><dt>Phone</dt><dd><a href="tel:+91REPLACE">REPLACE: phone number</a></dd></div>
           </dl>
         </section>
-        <!-- ===== END BLOCK 21 ===== -->
+        <!-- ===== END SECTION 8 ===== -->
       </div>
     </div>
   </main>
 
-  <!-- ===== BLOCK 2: Site footer · REQUIRED · do not edit ===== -->
+  <!-- Site footer: identical on every programme page. Do not edit. -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -384,6 +312,5 @@
       <a href="programmes.html#past">Back to past programmes</a>
     </div>
   </footer>
-  <!-- ===== END BLOCK 2 (footer) ===== -->
 </body>
 </html>

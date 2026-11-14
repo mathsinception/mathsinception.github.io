@@ -97,15 +97,15 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 
 ## Create a programme page from the template
 
-`_templates/mi-programme-page-template.html` contains every block a programme page can use: edition status, about, key facts, numbers, poster, programme content, the week, beyond mathematics, resource persons, advisors, registration, partners, photos, student quotes, student feedback videos, student reflections and contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
+`_templates/mi-programme-page-template.html` tells each edition's story in eight sections: About (with key facts), Programme, The week, People, Apply (with the poster), Gallery, In their words (student quotes and feedback videos) and Contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
 
 1. Copy the template to the website root as `programme-YYYY.html` (add the place if a year has two editions, for example `programme-2026-ppec-bengaluru.html`).
 2. Replace every `REPLACE:` value with confirmed details.
-3. Delete the optional blocks the edition does not need. Each block runs from its `BLOCK` comment to its `END BLOCK` comment. Also delete its link under "On this page". Never publish an empty block: if photos, quotes or videos are not ready, keep that section inside an HTML comment until they are, as `programme-2026.html` does.
+3. Remove what the edition does not need. Each section runs from its `SECTION` comment to its `END SECTION` comment, and smaller parts inside a section are marked `OPTIONAL PART`. Also remove the section's link under "On this page". Never publish an empty section: if photos, quotes or videos are not ready, keep that section inside an HTML comment until they are, as `programme-2026.html` does.
 4. Search the new page for `REPLACE:`. Nothing should be left.
 5. Add a matching `archive-entry` in `programmes.html`, newest first.
 
-The comment at the top of the template lists suggested blocks for upcoming and completed editions. Every block uses the existing styles, so no stylesheet change is needed.
+The comment at the top of the template shows which sections to keep for upcoming and completed editions. Every block uses the existing styles, so no stylesheet change is needed.
 
 ## Change the appearance
 
