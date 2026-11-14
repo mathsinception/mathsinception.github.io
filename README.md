@@ -55,13 +55,12 @@ Pages with section navigation use a native collapsible “On this page” menu. 
 
 ## Add trustees
 
-In `trustees.html`, find `class="trustee-list"`. Each member is one `<li class="trustee">` within the list. Add the member's name in an `<h3>`, put a known affiliation after the name, and put the role on the following line. Copy an existing `<li>` to add another member.
+In `trustees.html`, find `class="trustee-list"`. Add each member as a numbered list item in the format `Name (Position) - Affiliation`. Copy an existing `<li>` to add another member.
 
 ```html
-<li class="trustee">
-  <h3>Member name <span class="trustee-affiliation">— Institution</span></h3>
-  <p class="trustee-role">Role</p>
-</li>
+<ol class="trustee-list">
+  <li class="trustee">Member name (Position) - Institution</li>
+</ol>
 ```
 
 Do not publish unconfirmed personal details or affiliations.
