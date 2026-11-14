@@ -97,7 +97,7 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 
 ## Create a programme page from the template
 
-`_templates/mi-programme-page-template.html` tells each edition's story in eight sections: About (with key facts), Programme, The week, People, Apply (with the poster), Gallery, In their words (student quotes and feedback videos) and Contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
+`_templates/mi-programme-page-template.html` tells each edition's story in eight sections: About (with key facts), Programme, The week, People, Eligibility and applying (with the poster), Gallery, In their words (student quotes and feedback videos) and Contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
 
 1. Copy the template to the website root as `programme-YYYY.html` (add the place if a year has two editions, for example `programme-2026-ppec-bengaluru.html`).
 2. Replace every `REPLACE:` value with confirmed details.
