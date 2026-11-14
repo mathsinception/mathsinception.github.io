@@ -58,13 +58,14 @@ p { margin-bottom: 1.15rem; }
 .main-nav a[aria-current="page"] { color: var(--navy); box-shadow: 0 2px var(--navy); }
 
 /* INTRODUCTION */
-.home-intro { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding-block: 4.6rem; border-bottom: 1px solid var(--line); }
 .intro-text { max-width: 38rem; font-size: 1.125rem; color: var(--muted); line-height: 1.75; }
-.announcement { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.5rem; padding: 0; }
-.announcement .eyebrow { margin-bottom: 0; }
-.announcement h2 { font-size: 1.75rem; margin-bottom: 0; }
-.announcement p:not(.eyebrow) { margin-bottom: 0; font-size: .9375rem; color: var(--muted); }
-.announcement a { font-size: .875rem; }
+.page-layout.home-layout { display: flex; flex-direction: row-reverse; align-items: flex-start; gap: clamp(1.5rem, 3vw, 3rem); padding-block: 2rem 3rem; }
+.home-main { flex: 4 1 0; min-width: 0; }
+.home-announcement { flex: 1 1 0; position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid var(--blue); background: #f2f2f2; }
+.home-announcement .eyebrow { margin-bottom: .8rem; color: var(--blue); font-size: .75rem; font-weight: 600; }
+.home-announcement h2 { margin-bottom: .8rem; font-size: clamp(1.3rem, 2vw, 1.65rem); }
+.home-announcement p:not(.eyebrow) { margin-bottom: 1rem; color: var(--muted); font-size: .9375rem; line-height: 1.6; }
+.home-announcement a { font-size: .9rem; font-weight: 600; }
 .page-intro { padding-block: 3.75rem 3rem; border-bottom: 1px solid var(--line); }
 .page-intro .intro-text { margin-bottom: 0; }
 
@@ -152,11 +153,14 @@ p { margin-bottom: 1.15rem; }
 /* TABLET AND MOBILE */
 @media (max-width: 1000px) {
   .container { width: calc(100% - 3rem); }
-  .home-intro { gap: 2.5rem; grid-template-columns: 1fr; }
   .page-layout { grid-template-columns: minmax(0, 1fr); }
   .main-nav { column-gap: 1.4rem; }
   .brand-text { font-size: 1.3rem; }
   .desktop-break { display: none; }
+}
+@media (max-width: 900px) {
+  .page-layout.home-layout { flex-direction: column; align-items: stretch; gap: 0; padding-block: 1.5rem 2rem; }
+  .home-announcement { position: static; margin-top: 0; }
 }
 @media (max-width: 760px) {
   .header-inner { align-items: flex-start; flex-direction: column; gap: 1.25rem; padding-block: 1.25rem; }
@@ -166,9 +170,6 @@ p { margin-bottom: 1.15rem; }
   .home-page .brand-logo { flex-basis: 120px; width: 120px; height: 120px; }
   .main-nav { gap: .5rem 2rem; }
   .main-nav a { padding-block: .45rem; }
-  .home-intro { grid-template-columns: 1fr; gap: 2.25rem; padding-block: 3rem; }
-  .announcement { padding-block: .2rem; }
-  .announcement p { max-width: 28rem; }
   .page-intro { padding-block: 3rem 2.5rem; }
   .page-layout { grid-template-columns: 1fr; gap: 0; }
   .video-grid { grid-template-columns: 1fr; }

@@ -19,7 +19,7 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | Homepage introduction and mission | `index.html` | `Homepage introduction` or `id="about"` |
 | Programme overview on the homepage | `index.html` | `id="our-programmes"` |
 | Trust members, affiliations and roles | `trustees.html` | `class="trustee-list"` |
-| Homepage's next-programme notice | `index.html` | `announcement-title` |
+| Homepage's right-side upcoming-programme banner | `index.html` | `announcement-title` |
 | Homepage video tiles | `index.html` | `id="videos"` |
 | Student article feature | `index.html` | `id="student-reflection"` |
 | Upcoming programme details | `programmes.html` | `id="upcoming"` |
@@ -68,7 +68,7 @@ Do not publish unconfirmed personal details or affiliations.
 
 ## Announce an upcoming programme
 
-In `programmes.html`, replace the `upcoming-panel` inside `id="upcoming"` with your confirmed details. Also update the smaller announcement on the homepage. These are two ordinary HTML sections; they do not sync automatically.
+In `programmes.html`, replace the `upcoming-panel` inside `id="upcoming"` with your confirmed details. Also update the banner on the homepage. These are two ordinary HTML sections; they do not sync automatically.
 
 This example deliberately contains replacement text, not a fictitious programme:
 
