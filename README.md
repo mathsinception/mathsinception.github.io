@@ -17,11 +17,12 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | What you want to change | File | What to search for |
 | --- | --- | --- |
 | Homepage introduction and mission | `index.html` | `Homepage introduction` or `id="about"` |
-| Programme overview on the homepage | `index.html` | `id="our-programmes"` |
+| Programme differences | `programmes.html` | `id="our-programmes"` |
+| Learning approach in the programme | `programmes.html` | `id="our-approach"` |
 | Trust members, affiliations and roles | `trustees.html` | `class="trustee-list"` |
 | Homepage's right-side upcoming-programme banner | `index.html` | `announcement-title` |
 | Homepage video tiles | `index.html` | `id="videos"` |
-| Student article feature | `index.html` | `id="student-reflection"` |
+| Student reflections | `student-reflections.html` | `class="student-story"` |
 | Upcoming programme details | `programmes.html` | `id="upcoming"` |
 | Past programmes | `programmes.html` | `archive-entry` |
 | Past programme details and photos | `programme-YYYY.html` | `id="overview"` or `id="photos"` |
@@ -37,7 +38,7 @@ The stylesheet links include a version query (for example, `assets/styles.css?v=
 
 The homepage's video tiles link to public YouTube videos and use YouTube-hosted thumbnails. Update each thumbnail URL and matching video link together when replacing a video. The video opens on YouTube only when selected.
 
-The homepage's student reflection links to an external Medium article; update the linked title and summary if replacing it.
+The student reflections page contains participant stories and feedback. To add a reflection, copy the existing `<article class="student-story">` in `student-reflections.html` and replace its title, summary and link with approved content.
 
 Pages with section navigation use a native collapsible “On this page” menu. Select the heading to show or hide its section links.
 
