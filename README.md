@@ -19,16 +19,16 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | Homepage introduction and mission | `index.html` | `Homepage introduction` or `id="about"` |
 | Programme differences | `programmes.html` | `id="our-programmes"` |
 | Learning approach in the programme | `programmes.html` | `id="our-approach"` |
-| Trust members, affiliations and roles | `trustees.html` | `class="trustee-list"` |
-| Homepage's right-side upcoming-programme banner | `index.html` | `announcement-title` |
-| Homepage video tiles | `index.html` | `id="videos"` |
+| Trust members, affiliations and roles | `index.html` | `id="trustees"` |
+| Shared right-side upcoming-programme sidebar | All linked HTML pages | `announcement-title` |
+| Programme video tiles | `programmes.html` | `id="videos"` |
 | Student reflections | `student-reflections.html` | `class="student-story"` |
 | Upcoming programme details | `programmes.html` | `id="upcoming"` |
 | Past programmes | `programmes.html` | `archive-entry` |
 | Past programme details and photos | `programme-YYYY.html` | `id="overview"` or `id="photos"` |
 | Colours, fonts, spacing and width | `assets/styles.css` | `:root` |
-| Header logo | `assets/logo.png` | Replace the file |
-| Browser-tab icon | Both HTML files | `rel="icon"` |
+| Shared masthead logos | `assets/Square_fade_PNG.png` | Replace the file |
+| Browser-tab icon | Each HTML page | `rel="icon"` |
 | Navigation and footer | The relevant HTML page | `main-nav` and `site-footer` |
 | Search-result titles and descriptions | Each HTML file | `<title>` and `name="description"` |
 
@@ -36,7 +36,7 @@ Search for `EDIT:` in the HTML files to find the intended editing points. HTML c
 
 The stylesheet links include a version query (for example, `assets/styles.css?v=20261018-1`) to prevent browsers from reusing an older cached stylesheet after an update. Whenever you change `assets/styles.css`, update the version in every HTML page's stylesheet link to a new value before publishing. Keep the version identical across all pages.
 
-The homepage's video tiles link to public YouTube videos and use YouTube-hosted thumbnails. Update each thumbnail URL and matching video link together when replacing a video. The video opens on YouTube only when selected.
+The programme page's video tiles link to public YouTube videos and use YouTube-hosted thumbnails. Update each thumbnail URL and matching video link together when replacing a video. The video opens on YouTube only when selected.
 
 The student reflections page contains participant stories and feedback. To add a reflection, copy the existing `<article class="student-story">` in `student-reflections.html` and replace its title, summary and link with approved content.
 
@@ -45,10 +45,9 @@ Pages with section navigation use a native collapsible “On this page” menu. 
 
 
 
-- Replace the logo file at `assets/logo.png` with your own PNG artwork.
-- Update the logo image `src` in both HTML files to `assets/logo.png` if needed.
-- The logo is alongside the trust's full name, so its empty `alt` attribute is intentional: screen readers already get the brand name.
-- The browser-tab icon is a separate embedded SVG in each page. To replace it, save `assets/favicon.png` and replace the existing icon link in both pages with:
+- All linked pages use `assets/Square_fade_PNG.png` for both masthead logos and share the homepage's night-sky header, patterned background, upcoming-programmes sidebar, and compact footer.
+- The logos are alongside the trust's full name, so their empty `alt` attributes are intentional: screen readers already get the brand name.
+- The browser-tab icon is a separate image in each page. To replace it, save `assets/favicon.png` and update the icon link in each page to:
 
 ```html
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -56,7 +55,7 @@ Pages with section navigation use a native collapsible “On this page” menu. 
 
 ## Add trustees
 
-In `trustees.html`, find `class="trustee-list"`. Add each member as a numbered list item in the format `Name (Position) - Affiliation`. Copy an existing `<li>` to add another member.
+In `index.html`, find `id="trustees"` and its `class="trustee-list"`. Add each member as a numbered list item in the format `Name (Position) - Affiliation`. Copy an existing `<li>` to add another member.
 
 ```html
 <ol class="trustee-list">
@@ -149,7 +148,7 @@ A private review copy made during this conversation is separate from independent
 ## Content that still needs your input
 
 - Review and approve the homepage mission and approach wording; it is draft copy based on the programme description.
-- Replace the temporary logo and browser-tab icon.
+- Replace the browser-tab icon if the trust has approved replacement artwork.
 - Confirm any remaining trust-member roles and affiliations before publishing.
 - Add confirmed upcoming dates, venue, eligibility and application information.
 - Add verified dates, venues, programme details and approved photos to each past-edition page.
