@@ -97,15 +97,15 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 
 ## Create a programme page from the template
 
-`_templates/mi-programme-page-template.html` tells each edition's story in eight sections: About (with key facts), Programme, The week, People, Eligibility and applying (with the poster), Gallery, In their words (student quotes and feedback videos) and Contact. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
+`_templates/mi-programme-page-template.html` gives every edition the same simple page, in the order a visitor asks: About this edition (with key facts), Who can apply (upcoming editions), What students learn, The week, Who teaches, Gallery and In their words (completed editions), Contact, and links to the previous and next editions. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
 
 1. Copy the template to the website root as `programme-YYYY.html` (add the place if a year has two editions, for example `programme-2026-ppec-bengaluru.html`).
 2. Replace every `REPLACE:` value with confirmed details.
 3. Remove what the edition does not need. Each section runs from its `SECTION` comment to its `END SECTION` comment, and smaller parts inside a section are marked `OPTIONAL PART`. Also remove the section's link under "On this page". Never publish an empty section: if photos, quotes or videos are not ready, keep that section inside an HTML comment until they are, as `programme-2026.html` does.
 4. Search the new page for `REPLACE:`. Nothing should be left.
-5. Add a matching `archive-entry` in `programmes.html`, newest first.
+5. Add a matching `archive-entry` in `programmes.html`, newest first, and update the previous and next links on the neighbouring edition pages.
 
-The comment at the top of the template shows which sections to keep for upcoming and completed editions. Every block uses the existing styles, so no stylesheet change is needed.
+The comment at the top of the template explains how one page is updated through an edition's life: announced, applications closed, selection published, and after the workshop. Every block uses the existing styles, so no stylesheet change is needed.
 
 ## Change the appearance
 

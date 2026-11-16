@@ -5,51 +5,62 @@
   One page per edition. This folder starts with "_" so GitHub Pages does not
   publish it; the template itself never appears on the live website.
 
-  THE PAGE TELLS ONE STORY, IN THIS ORDER
-    Intro ............ what, where, when (one sentence)
-    1  About ......... what the workshop is, and the key facts
-    2  Programme ..... what participants learn
-    3  The week ...... what the days look like
-    4  People ........ who teaches, advises and supports it
-    5  Eligibility ... who can apply, and how (upcoming editions)
-    6  Gallery ....... what it looked like (completed editions)
-    7  In their words  what students said (completed editions)
-    8  Contact ....... who to ask
+  WHO READS THIS PAGE
+    Before the workshop: students and parents deciding whether to apply.
+    After the workshop:  anyone who wants to know what that edition was:
+                         alumni, parents, schools, partners, future instructors.
+  So the page answers, in order: What is it? When and where? Can I apply, and how?
+  What is taught? What do the days look like? Who teaches? What was it like? Who do I ask?
+
+  THE PAGE, TOP TO BOTTOM
+    Intro ............... edition, title, one sentence: what, where, when
+    Status panel ........ upcoming only: applications open / closed / list published
+    1  About ............ what the workshop is, and the key facts
+    2  Applying ......... upcoming only: who can apply, how, by when, poster
+    3  What students learn
+    4  The week ......... activities (upcoming) or day by day (completed)
+    5  Who teaches ...... instructors and guest speakers
+    6  Gallery .......... completed only
+    7  In their words ... completed only: quotes and videos
+    8  Contact
+    Other editions ...... links to the previous and next edition pages
 
   HOW TO USE
   1. Copy this file to the website root as programme-YYYY.html
      (add a place if a year has two editions, e.g. programme-2026-ppec-bengaluru.html).
   2. Fill in every "REPLACE:" value. Use only confirmed, approved details.
-  3. Remove what the edition does not need. Each section runs from its "SECTION"
-     comment to its "END SECTION" comment; smaller optional parts inside a section
-     are marked "OPTIONAL PART". Also remove the section's link under "On this page".
+  3. Remove what the edition does not need (see THE LIFE OF A PAGE below). Each section
+     runs from its "SECTION" comment to its "END SECTION" comment; smaller optional parts
+     inside a section are marked "OPTIONAL PART". Also remove its link under "On this page".
   4. Never publish an empty section. If photos, quotes or videos are not ready,
      wrap the whole section in an HTML comment so it stays in the file, hidden,
      ready to switch on later (programme-2026.html shows how).
   5. Check nothing is left to fill:   grep -n "REPLACE" programme-YYYY.html
-  6. Add a matching archive-entry in programmes.html (newest first).
-  7. If assets/styles.css has a newer ?v= value on the other pages, use the same one here.
-     Likewise, the site header, the "Upcoming programmes" sidebar and the footer must
-     match the other pages exactly; copy them from index.html if they have changed.
+  6. Add a matching archive-entry in programmes.html (newest first), and update the
+     "Other editions" links on the neighbouring edition pages.
+  7. The site header, the "Upcoming programmes" sidebar, the footer and the ?v= value
+     of assets/styles.css must match the other pages exactly; copy them from index.html
+     if they have changed.
 
-  WHICH SECTIONS TO KEEP
-                     Upcoming edition        Completed edition
-    Status panel     yes                     no
-    1 About          yes                     yes  (past tense, add the numbers)
-    2 Programme      yes                     yes
-    3 The week       activities list         day-by-day list
-    4 People         yes                     yes
-    5 Eligibility    yes  (with poster)      no  (eligibility stays in Key facts)
-    6 Gallery        no                      yes
-    7 In their words no                      yes
-    8 Contact        yes                     optional
+  THE LIFE OF A PAGE (one page, updated at each stage)
+    a. Announced ......... Status "Applications open". Keep About (with "Apply by"),
+                           Applying, What students learn, The week (activities list),
+                           Who teaches, Contact. Delete Gallery and In their words.
+    b. Applications closed Change the status line. Nothing else changes.
+    c. Selection published Status "Selection list published", with the link to the list.
+    d. After the workshop  Delete the status panel, the Applying section and "Apply by".
+                           Rewrite in the past tense; heading "Who taught", listing only
+                           people who took part. Switch The week to the day-by-day list.
+                           Add the confirmed numbers to Key facts, and the gallery and
+                           quotes when approved.
 
   STYLE RULES
   - Use only the classes already in assets/styles.css. No new classes, no inline styles.
   - Write for a parent or student seeing the programme for the first time:
     short, factual sentences, no superlatives, no emojis. Use &amp; for "&".
-  - Each section has a small label (what kind of section) and a heading that says
-    something specific. Do not repeat the label in the heading.
+  - Section headings are short and plain (they are shown in capitals), the same words
+    as the "On this page" links. Say each fact once: dates and venue live in the intro
+    and Key facts, not in the paragraphs as well.
   - Link to forms and maps with ordinary links; do not embed them.
   - Images go in assets/ named miYYYY-what.jpg, about 1600 px on the long side,
     with accurate alt text and their real width and height.
@@ -66,7 +77,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Site header: identical on every programme page. Do not edit. -->
+  <!-- Site header: identical on every page. Do not edit. -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
@@ -95,16 +106,16 @@
         <!-- ===== END INTRO ===== -->
         <div class="page-layout">
       <!-- ===== ON THIS PAGE · REQUIRED =====
-           One link per section you keep, in page order. -->
+           One link per section you keep, in page order, with the same words as the headings. -->
       <aside class="page-sidebar">
         <details class="page-index">
           <summary>On this page</summary>
           <nav aria-label="On this page">
-            <a href="#overview">About</a>
-            <a href="#programme">Programme</a>
+            <a href="#overview">About this edition</a>
+            <a href="#apply">Who can apply</a>
+            <a href="#programme">What students learn</a>
             <a href="#week">The week</a>
-            <a href="#people">People</a>
-            <a href="#apply">Eligibility &amp; applying</a>
+            <a href="#people">Who teaches</a>
             <a href="#gallery">Gallery</a>
             <a href="#voices">In their words</a>
             <a href="#contact">Contact</a>
@@ -129,21 +140,22 @@
 
         <!-- ===== SECTION 1 · ABOUT · REQUIRED =====
              Paragraph 1: what the workshop is and how it teaches.
-             Paragraph 2: this edition: hosted by / in collaboration with whom.
+             Paragraph 2: one sentence on who hosts or supports this edition.
              Key facts: keep the rows that apply; they flow three to a row. -->
         <section id="overview" class="content-section" aria-labelledby="overview-title">
-          <p class="section-label">About this edition</p>
-          <h2 id="overview-title">Building foundations of mathematical thinking</h2>
+          <h2 id="overview-title">About this edition</h2>
           <p>REPLACE: What the workshop is and how it teaches.</p>
-          <p>REPLACE: This edition: where, when, in collaboration with whom.</p>
+          <p>REPLACE: e.g. This edition is hosted and sponsored by PARTNER, which makes it free for every participant.</p>
           <dl class="programme-facts">
             <div><dt>Dates</dt><dd>REPLACE: D–D Month YYYY</dd></div>
             <div><dt>Venue</dt><dd>REPLACE: Venue, Town<br><a href="REPLACE: Google Maps link" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></dd></div>
             <div><dt>Format</dt><dd>REPLACE: Fully residential, N days</dd></div>
-            <div><dt>Eligibility</dt><dd>REPLACE: Students who complete Class 10 in YYYY<!-- upcoming editions: add <br><a href="#apply">Full eligibility</a> --></dd></div>
+            <div><dt>Eligibility</dt><dd>REPLACE: Students who complete Class 10 in YYYY</dd></div>
             <div><dt>Fee</dt><dd>REPLACE: Free, including food and accommodation. Students arrange their own travel.</dd></div>
+            <!-- OPTIONAL PART · each partner and what they did -->
+            <div><dt>Host and sponsor</dt><dd>REPLACE: Partner, Town</dd></div>
             <!-- OPTIONAL PART · upcoming editions -->
-            <div><dt>Apply by</dt><dd>REPLACE: D Month YYYY</dd></div>
+            <div><dt>Apply by</dt><dd>REPLACE: D Month YYYY<br><a href="#apply">How to apply</a></dd></div>
             <!-- OPTIONAL PART · completed editions: confirmed figures only -->
             <div><dt>Students</dt><dd>REPLACE: N</dd></div>
             <div><dt>Schools</dt><dd>REPLACE: N</dd></div>
@@ -152,72 +164,13 @@
         </section>
         <!-- ===== END SECTION 1 ===== -->
 
-        <!-- ===== SECTION 2 · PROGRAMME · REQUIRED =====
-             The three strands of the mathematics. Update the topics each year. -->
-        <section id="programme" class="content-section" aria-labelledby="programme-title">
-          <p class="section-label">The programme</p>
-          <h2 id="programme-title">What participants do</h2>
-          <div class="approach-list">
-            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>REPLACE: Topics, e.g. mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
-            <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>REPLACE: e.g. Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
-            <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>REPLACE: e.g. Observing patterns, making conjectures and proving them independently.</p></div></div>
-          </div>
-        </section>
-        <!-- ===== END SECTION 2 ===== -->
-
-        <!-- ===== SECTION 3 · THE WEEK · OPTIONAL =====
-             Upcoming edition: keep the activities list, delete the days.
-             Completed edition: keep the days (from the final timetable, highlights only,
-             no clock times), delete the activities list. -->
-        <section id="week" class="content-section" aria-labelledby="week-title">
-          <p class="section-label">The week</p>
-          <h2 id="week-title">REPLACE: Six days at the workshop</h2>
-          <p>REPLACE: The daily rhythm, e.g. Each day has four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
-          <!-- OPTIONAL PART · upcoming editions: activities -->
-          <ul>
-            <li>REPLACE: e.g. A guidance session on higher studies</li>
-            <li>REPLACE: e.g. A music concert and a movie night</li>
-            <li>REPLACE: e.g. Sports every evening</li>
-          </ul>
-          <!-- OPTIONAL PART · completed editions: one row per day -->
-          <dl class="programme-facts">
-            <div><dt>REPLACE: Fri, 1 May</dt><dd>REPLACE: Highlights</dd></div>
-            <div><dt>REPLACE: Sat, 2 May</dt><dd>REPLACE: Highlights</dd></div>
-            <div><dt>REPLACE: Sun, 3 May</dt><dd>REPLACE: Highlights</dd></div>
-          </dl>
-        </section>
-        <!-- ===== END SECTION 3 ===== -->
-
-        <!-- ===== SECTION 4 · PEOPLE · REQUIRED =====
-             One person per line: "Name, Affiliation", no titles, separated by <br>.
-             For a completed edition, list only people who actually took part and change
-             the heading to "Who taught". Groups flow three to a row. -->
-        <section id="people" class="content-section" aria-labelledby="people-title">
-          <p class="section-label">People</p>
-          <h2 id="people-title">Who teaches</h2>
-          <dl class="programme-facts">
-            <div><dt>Instructors</dt><dd>REPLACE: Name, Affiliation<br>REPLACE: Name, Affiliation</dd></div>
-            <!-- OPTIONAL PART -->
-            <div><dt>Guest speakers</dt><dd>REPLACE: Name, Affiliation</dd></div>
-            <!-- OPTIONAL PART -->
-            <div><dt>Advisors</dt><dd>REPLACE: Name, Affiliation</dd></div>
-            <!-- OPTIONAL PART · each partner and what they did -->
-            <div><dt>Host and sponsor</dt><dd>REPLACE: Partner, Town</dd></div>
-          </dl>
-          <!-- OPTIONAL PART · one sentence of thanks -->
-          <p>REPLACE: e.g. We thank PARTNER for hosting the workshop and making it free for every participant.</p>
-        </section>
-        <!-- ===== END SECTION 4 ===== -->
-
-        <!-- ===== SECTION 5 · ELIGIBILITY AND APPLYING · UPCOMING EDITIONS ONLY =====
-             Eligibility comes first: readers check whether they qualify before they look
-             at deadlines and forms. List only confirmed criteria.
-             Then how to apply. Link to the form; do not embed it. The poster sits at the
-             end because this is where readers decide to apply, and the poster is what they share.
-             Poster files: assets/miYYYY-poster.jpg (about 1000 px wide) and, if available,
-             assets/miYYYY-poster.pdf for printing. -->
+        <!-- ===== SECTION 2 · WHO CAN APPLY · UPCOMING EDITIONS ONLY =====
+             Placed straight after About: this is what an applicant looks for next.
+             Eligibility comes first (readers check whether they qualify), then how to apply.
+             Link to the form; do not embed it. The poster sits at the end because it is
+             what readers share. Poster files: assets/miYYYY-poster.jpg (about 1000 px wide)
+             and, if available, assets/miYYYY-poster.pdf for printing. -->
         <section id="apply" class="content-section" aria-labelledby="apply-title">
-          <p class="section-label">Eligibility and applying</p>
           <h2 id="apply-title">Who can apply</h2>
           <ul>
             <li>REPLACE: e.g. Students who complete Class 10 in YYYY, from any board</li>
@@ -239,14 +192,73 @@
             <figcaption>REPLACE: Poster for MIYYYY. <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">Download the full-size poster</a> to share or print.</figcaption>
           </figure>
         </section>
+        <!-- ===== END SECTION 2 ===== -->
+
+        <!-- ===== SECTION 3 · WHAT STUDENTS LEARN · REQUIRED =====
+             The three strands of the mathematics. Update the topics each year.
+             Completed edition: heading and link "What students learned". -->
+        <section id="programme" class="content-section" aria-labelledby="programme-title">
+          <h2 id="programme-title">What students learn</h2>
+          <p>REPLACE: e.g. The mathematics is built up in three stages over the week.</p>
+          <div class="approach-list">
+            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>REPLACE: Topics, e.g. mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>REPLACE: e.g. Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>REPLACE: e.g. Observing patterns, making conjectures and proving them independently.</p></div></div>
+          </div>
+        </section>
+        <!-- ===== END SECTION 3 ===== -->
+
+        <!-- ===== SECTION 4 · THE WEEK · OPTIONAL =====
+             Upcoming edition: keep the activities list, delete the days.
+             Completed edition: keep the days (from the final timetable, highlights only,
+             no clock times), delete the activities list. -->
+        <section id="week" class="content-section" aria-labelledby="week-title">
+          <h2 id="week-title">The week</h2>
+          <p>REPLACE: The daily rhythm, e.g. Each day has four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
+          <!-- OPTIONAL PART · upcoming editions: activities -->
+          <ul>
+            <li>REPLACE: e.g. A guidance session on higher studies</li>
+            <li>REPLACE: e.g. A music concert and a movie night</li>
+            <li>REPLACE: e.g. Sports every evening</li>
+          </ul>
+          <!-- OPTIONAL PART · completed editions: one row per day -->
+          <dl class="programme-facts">
+            <div><dt>REPLACE: Day 1 · Fri, 1 May</dt><dd>REPLACE: Highlights</dd></div>
+            <div><dt>REPLACE: Day 2 · Sat, 2 May</dt><dd>REPLACE: Highlights</dd></div>
+            <div><dt>REPLACE: Day 3 · Sun, 3 May</dt><dd>REPLACE: Highlights</dd></div>
+          </dl>
+        </section>
+        <!-- ===== END SECTION 4 ===== -->
+
+        <!-- ===== SECTION 5 · WHO TEACHES · REQUIRED =====
+             One person per line: "Name, Affiliation", no titles.
+             Completed edition: heading and link "Who taught", and list only people who
+             actually took part. The host is already in Key facts; do not repeat it here. -->
+        <section id="people" class="content-section" aria-labelledby="people-title">
+          <h2 id="people-title">Who teaches</h2>
+          <h3>Instructors</h3>
+          <ul>
+            <li>REPLACE: Name, Affiliation</li>
+            <li>REPLACE: Name, Affiliation</li>
+          </ul>
+          <!-- OPTIONAL PART -->
+          <h3>Guest speakers</h3>
+          <ul>
+            <li>REPLACE: Name, Affiliation</li>
+          </ul>
+          <!-- OPTIONAL PART -->
+          <h3>Advisors</h3>
+          <ul>
+            <li>REPLACE: Name, Affiliation</li>
+          </ul>
+        </section>
         <!-- ===== END SECTION 5 ===== -->
 
         <!-- ===== SECTION 6 · GALLERY · COMPLETED EDITIONS =====
              Approved photos of THIS edition only, two or four: a group photo first,
              then sessions and discussions. -->
         <section id="gallery" class="content-section" aria-labelledby="gallery-title">
-          <p class="section-label">Gallery</p>
-          <h2 id="gallery-title">REPLACE: Moments from MIYYYY</h2>
+          <h2 id="gallery-title">Gallery</h2>
           <div class="video-grid">
             <figure class="photo-placeholder">
               <img src="REPLACE: assets/miYYYY-group.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
@@ -269,7 +281,6 @@
              Feedback videos (optional): this edition's videos on YouTube; change the video ID
              in BOTH the link and the thumbnail. -->
         <section id="voices" class="content-section" aria-labelledby="voices-title">
-          <p class="section-label">Student voices</p>
           <h2 id="voices-title">In their words</h2>
           <div class="video-grid">
             <article class="student-story">
@@ -300,17 +311,26 @@
         </section>
         <!-- ===== END SECTION 7 ===== -->
 
-        <!-- ===== SECTION 8 · CONTACT · OPTIONAL =====
+        <!-- ===== SECTION 8 · CONTACT · REQUIRED =====
              Contact details can change from one edition to the next. -->
         <section id="contact" class="content-section" aria-labelledby="contact-title">
-          <p class="section-label">Questions</p>
           <h2 id="contact-title">Contact</h2>
+          <p>REPLACE: Upcoming: For questions about eligibility or applying. Completed: For questions about this edition or about joining a future one.</p>
           <dl class="programme-facts">
             <div><dt>Email</dt><dd><a href="mailto:REPLACE: email">REPLACE: email</a></dd></div>
             <div><dt>Phone</dt><dd><a href="tel:+91REPLACE">REPLACE: phone number</a></dd></div>
           </dl>
         </section>
         <!-- ===== END SECTION 8 ===== -->
+
+        <!-- ===== OTHER EDITIONS · REQUIRED =====
+             The editions just before and after this one, in the order of the archive in
+             programmes.html. Leave out "Next" on the newest page. -->
+        <nav class="content-section" aria-label="Other editions">
+          <p><a href="REPLACE: programme-YYYY.html"><span aria-hidden="true">←</span> Previous: REPLACE: Mathematical Inception YYYY</a></p>
+          <p><a href="REPLACE: programme-YYYY.html">Next: REPLACE: Mathematical Inception YYYY <span aria-hidden="true">→</span></a></p>
+        </nav>
+        <!-- ===== END OTHER EDITIONS ===== -->
       </div>
         </div>
       </div>
