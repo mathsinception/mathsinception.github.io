@@ -53,7 +53,7 @@ p { margin-bottom: 1.15rem; }
 /* Shared night-sky masthead. */
 .site-header {
   border: 0;
-  background-color: #05070d;
+  background-color: #071827;
   background-image:
     radial-gradient(1px 1px at 13px 19px, rgba(255, 255, 255, .72) 55%, transparent 100%),
     radial-gradient(1.2px 1.2px at 39px 57px, rgba(190, 207, 245, .65) 55%, transparent 100%),
@@ -69,10 +69,10 @@ p { margin-bottom: 1.15rem; }
 }
 .header-inner { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; min-height: 0; padding-block: clamp(2rem, 4vw, 3.75rem); }
 .brand { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; width: 100%; color: #fff; text-decoration: none; }
-.brand-logo { height: auto; aspect-ratio: 1; object-fit: contain; }
+.brand-logo { height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: lighten; }
 .brand-logo-left { grid-column: 1; justify-self: start; }
 .brand-logo-right { grid-column: 3; justify-self: end; }
-.brand-logo-left, .brand-logo-right { width: clamp(140px, 16vw, 220px); }
+.brand-logo-left, .brand-logo-right { width: clamp(154px, 17.6vw, 242px); }
 .brand-text { grid-column: 2; justify-self: center; margin: 0; color: #fff; font-family: "Chalkduster", fantasy; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; letter-spacing: .025em; line-height: 1.15; text-align: center; text-transform: uppercase; }
 .main-nav { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 2rem; row-gap: .5rem; }
 .main-nav a { padding-block: .35rem; color: #fff; text-decoration: none; font-size: .9375rem; }
@@ -113,6 +113,7 @@ p { margin-bottom: 1.15rem; }
 .content-section { padding-block: 3rem; border-bottom: 1px solid var(--line); scroll-margin-top: 1.5rem; }
 .content-section:last-child { border-bottom: 0; }
 .content-section > p:last-child { margin-bottom: 0; }
+.what-we-are-not-label { margin-bottom: .35rem; }
 .content-section { border-color: #d4dbe0; }
 .content-section > h2 { color: #3e454b; font-family: var(--sans); font-size: clamp(1.35rem, 2.2vw, 1.8rem); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .programme-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; margin-block: 1.75rem; }
@@ -195,7 +196,7 @@ p { margin-bottom: 1.15rem; }
   .page-layout.home-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "announcement" "main"; align-items: stretch; gap: 0; margin-right: 0; padding-block: 1.5rem 2rem; }
   .home-announcement { position: static; margin-top: 0; margin-right: 0; }
   .brand { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .5rem; }
-  .brand-logo-left, .brand-logo-right { width: clamp(64px, 15vw, 120px); }
+  .brand-logo-left, .brand-logo-right { width: clamp(70.4px, 16.5vw, 132px); }
   .brand-text { font-size: clamp(1.65rem, 5vw, 2.5rem); }
 }
 @media (max-width: 760px) {
@@ -216,7 +217,7 @@ p { margin-bottom: 1.15rem; }
   .container { width: calc(100% - 2.25rem); }
   .brand { column-gap: .35rem; }
   .brand-text { font-size: clamp(1.1rem, 5vw, 1.4rem); letter-spacing: .03em; }
-  .brand-logo-left, .brand-logo-right { width: clamp(64px, 18vw, 80px); }
+  .brand-logo-left, .brand-logo-right { width: clamp(70.4px, 19.8vw, 88px); }
   .programme-facts { grid-template-columns: 1fr; }
   .programme-facts > div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: .75rem; }
   .programme-facts dt { margin: 0; }
@@ -228,7 +229,7 @@ p { margin-bottom: 1.15rem; }
   .footer-top-link { justify-self: center; }
 }
 @media (max-width: 360px) {
-  .brand-logo-left, .brand-logo-right { width: 56px; }
+  .brand-logo-left, .brand-logo-right { width: 61.6px; }
   .brand-text { font-size: 1rem; letter-spacing: 0; }
 }
 @media print {
