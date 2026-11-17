@@ -83,15 +83,15 @@ p { margin-bottom: 1.15rem; }
 .intro-text { max-width: 38rem; font-size: 1.125rem; color: var(--muted); line-height: 1.75; }
 .page-layout.home-layout { display: grid; grid-template-columns: minmax(0, 4fr) minmax(200px, 1fr); grid-template-areas: "main announcement"; align-items: flex-start; gap: clamp(1.5rem, 3vw, 3rem); padding-block: 2rem 3rem; }
 .home-main { grid-area: main; min-width: 0; }
-.home-announcement { position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid #c3a77a; background: #6f5138; color: #fff; }
+.home-announcement { position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid #c3a77a; background: #182f4b; color: #f3ede4; }
 .home-announcement { grid-area: announcement; }
 .home-announcement .eyebrow { margin-bottom: .8rem; color: #f0d7b4; font-size: .75rem; font-weight: 600; }
-.home-announcement h2 { margin-bottom: .8rem; color: #fff; font-size: clamp(1.3rem, 2vw, 1.65rem); }
-.home-announcement p:not(.eyebrow) { margin-bottom: 1rem; color: #f1e7db; font-size: .9375rem; line-height: 1.6; }
-.home-announcement a, .home-announcement a:hover { color: #fff; }
+.home-announcement h2 { margin-bottom: .8rem; color: #f3ede4; font-size: clamp(1.3rem, 2vw, 1.65rem); }
+.home-announcement p:not(.eyebrow) { margin-bottom: 1rem; color: #f3ede4; font-size: .9375rem; line-height: 1.6; }
+.home-announcement a, .home-announcement a:hover { color: #f3ede4; }
 .home-announcement a { font-size: .9rem; font-weight: 600; }
-.home-announcement .programme-announcements-box { display: block; margin-top: 1.2rem; padding: .75rem .85rem; border: 1px solid #d5c09b; background: #f0f2f3; color: #6f5138; line-height: 1.4; text-decoration: none; }
-.home-announcement .programme-announcements-box:hover { background: #fff; color: #4c3728; }
+.home-announcement .programme-announcements-box { display: block; margin-top: 1.2rem; padding: .75rem .85rem; border: 1px solid #c3a77a; background: #f3ede4; color: #182f4b; line-height: 1.4; text-decoration: none; }
+.home-announcement .programme-announcements-box:hover { background: #fff; color: #182f4b; }
 .page-intro { padding-block: 3.75rem 3rem; border-bottom: 1px solid var(--line); }
 .page-intro .intro-text { margin-bottom: 0; }
 
