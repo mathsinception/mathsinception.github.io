@@ -6,8 +6,8 @@
   publish it; the template itself never appears on the live website.
 
   WHO READS THIS PAGE
-    Before the workshop: students and parents deciding whether to apply.
-    After the workshop:  anyone who wants to know what that edition was:
+    Before the programme: students and parents deciding whether to apply.
+    After the programme: anyone who wants to know what that edition was:
                          alumni, parents, schools, partners, future instructors.
   So the page answers, in order: What is it? When and where? Can I apply, and how?
   What is taught? What do the days look like? Who teaches? What was it like? Who do I ask?
@@ -15,7 +15,7 @@
   THE PAGE, TOP TO BOTTOM
     Intro ............... edition, title, one sentence: what, where, when
     Status panel ........ upcoming only: applications open / closed / list published
-    1  About ............ what the workshop is, and the key facts
+    1  About ............ what the programme is, and the key facts
     2  Applying ......... upcoming only: who can apply, how, by when, poster
     3  What students learn
     4  The week ......... activities (upcoming) or day by day (completed)
@@ -24,6 +24,13 @@
     7  In their words ... completed only: quotes and videos
     8  Contact
     Other editions ...... links to the previous and next edition pages
+
+  NAMING AN EDITION
+    Each edition has a code: MI + year + a three-letter place code, e.g. MI2026-DPR
+    (Dharapuram) or MI2026-BLR (Bengaluru). The page title is the code followed by the
+    venue, e.g. "MI2026-DPR Veveaham School", written exactly as in the programmes.html
+    archive. Use the same name in <title>, the h1, the archive entry and the
+    "Other editions" links of the neighbouring pages.
 
   HOW TO USE
   1. Copy this file to the website root as programme-YYYY.html
@@ -38,9 +45,9 @@
   5. Check nothing is left to fill:   grep -n "REPLACE" programme-YYYY.html
   6. Add a matching archive-entry in programmes.html (newest first), and update the
      "Other editions" links on the neighbouring edition pages.
-  7. The site header, the "Upcoming programmes" sidebar, the footer and the ?v= value
-     of assets/styles.css must match the other pages exactly; copy them from index.html
-     if they have changed.
+  7. The site header (with its logo preload), the "Upcoming programmes" sidebar, the
+     footer and the ?v= value of assets/styles.css must match the other pages exactly;
+     copy them from index.html if they have changed.
 
   THE LIFE OF A PAGE (one page, updated at each stage)
     a. Announced ......... Status "Applications open". Keep About (with "Apply by"),
@@ -48,7 +55,7 @@
                            Who teaches, Contact. Delete Gallery and In their words.
     b. Applications closed Change the status line. Nothing else changes.
     c. Selection published Status "Selection list published", with the link to the list.
-    d. After the workshop  Delete the status panel, the Applying section and "Apply by".
+    d. After the programme Delete the status panel, the Applying section and "Apply by".
                            Rewrite in the past tense; heading "Who taught", listing only
                            people who took part. Switch The week to the day-by-day list.
                            Add the confirmed numbers to Key facts, and the gallery and
@@ -62,17 +69,18 @@
     as the "On this page" links. Say each fact once: dates and venue live in the intro
     and Key facts, not in the paragraphs as well.
   - Link to forms and maps with ordinary links; do not embed them.
-  - Images go in assets/ named miYYYY-what.jpg, about 1600 px on the long side,
+  - Images go in assets/ named miYYYY-xxx-what.jpg (xxx = place code, e.g. mi2026-dpr-group.jpg), about 1600 px on the long side,
     with accurate alt text and their real width and height.
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REPLACE: Mathematical Inception YYYY | Mathematical Inception Trust</title>
-  <meta name="description" content="REPLACE: One sentence, e.g. The fifth edition of Mathematical Inception: a six-day residential mathematics workshop at VENUE, D–D Month YYYY.">
+  <title>REPLACE: MIYYYY-XXX Venue | Mathematical Inception Trust</title>
+  <meta name="description" content="REPLACE: One sentence, e.g. MIYYYY-XXX, the sixth edition of Mathematical Inception: a six-day residential mathematics programme at VENUE, TOWN, D–D Month YYYY.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=20261116-25">
+  <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -81,9 +89,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
-        <img class="brand-logo brand-logo-left" src="assets/Square_fade_PNG.png" width="200" height="200" alt="">
+        <img class="brand-logo brand-logo-left" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
         <span class="brand-text">Mathematical<br>Inception<br>Trust</span>
-        <img class="brand-logo brand-logo-right" src="assets/Square_fade_PNG.png" width="200" height="200" alt="">
+        <img class="brand-logo brand-logo-right" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -97,11 +105,12 @@
     <div class="page-layout home-layout">
       <div class="home-main">
         <!-- ===== INTRO · REQUIRED =====
-             Eyebrow: edition number and year. Intro line: one plain sentence. -->
+             Eyebrow: edition code and edition number. Title: code and venue (see NAMING).
+             Intro line: one plain sentence. -->
         <header class="page-intro">
-          <p class="eyebrow">REPLACE: Fifth edition · YYYY</p>
-          <h1 id="page-title">REPLACE: Mathematical Inception YYYY</h1>
-          <p class="intro-text">REPLACE: A six-day residential workshop at VENUE, TOWN, D–D Month YYYY.</p>
+          <p class="eyebrow">REPLACE: MIYYYY-XXX · Sixth edition</p>
+          <h1 id="page-title">REPLACE: MIYYYY-XXX Venue</h1>
+          <p class="intro-text">REPLACE: A six-day residential programme at VENUE, TOWN, D–D Month YYYY.</p>
         </header>
         <!-- ===== END INTRO ===== -->
         <div class="page-layout">
@@ -131,7 +140,7 @@
         <section id="status" class="content-section" aria-label="Edition status">
           <div class="upcoming-panel">
             <span class="status-label">REPLACE: Applications open</span>
-            <h3>REPLACE: Mathematical Inception YYYY (MIYYYY)</h3>
+            <h3>REPLACE: MIYYYY-XXX Venue</h3>
             <p>REPLACE: e.g. Applications close on D Month YYYY.</p>
             <a href="#apply">How to apply <span aria-hidden="true">↓</span></a>
           </div>
@@ -139,12 +148,12 @@
         <!-- ===== END STATUS PANEL ===== -->
 
         <!-- ===== SECTION 1 · ABOUT · REQUIRED =====
-             Paragraph 1: what the workshop is and how it teaches.
+             Paragraph 1: what the programme is and how it teaches.
              Paragraph 2: one sentence on who hosts or supports this edition.
              Key facts: keep the rows that apply; they flow three to a row. -->
         <section id="overview" class="content-section" aria-labelledby="overview-title">
           <h2 id="overview-title">About this edition</h2>
-          <p>REPLACE: What the workshop is and how it teaches.</p>
+          <p>REPLACE: What the programme is and how it teaches.</p>
           <p>REPLACE: e.g. This edition is hosted and sponsored by PARTNER, which makes it free for every participant.</p>
           <dl class="programme-facts">
             <div><dt>Dates</dt><dd>REPLACE: D–D Month YYYY</dd></div>
@@ -168,8 +177,8 @@
              Placed straight after About: this is what an applicant looks for next.
              Eligibility comes first (readers check whether they qualify), then how to apply.
              Link to the form; do not embed it. The poster sits at the end because it is
-             what readers share. Poster files: assets/miYYYY-poster.jpg (about 1000 px wide)
-             and, if available, assets/miYYYY-poster.pdf for printing. -->
+             what readers share. Poster files: assets/miYYYY-xxx-poster.jpg (about 1000 px wide)
+             and, if available, assets/miYYYY-xxx-poster.pdf for printing. -->
         <section id="apply" class="content-section" aria-labelledby="apply-title">
           <h2 id="apply-title">Who can apply</h2>
           <ul>
@@ -182,14 +191,14 @@
           <dl class="programme-facts">
             <div><dt>Apply by</dt><dd>REPLACE: D Month YYYY</dd></div>
             <div><dt>Selection list</dt><dd>REPLACE: Published on this page by D Month YYYY</dd></div>
-            <div><dt>Application form</dt><dd><a href="REPLACE: form link" target="_blank" rel="noopener noreferrer">Apply for REPLACE: MIYYYY <span aria-hidden="true">↗</span></a></dd></div>
+            <div><dt>Application form</dt><dd><a href="REPLACE: form link" target="_blank" rel="noopener noreferrer">Apply for REPLACE: MIYYYY-XXX <span aria-hidden="true">↗</span></a></dd></div>
           </dl>
           <!-- OPTIONAL PART · poster -->
           <figure class="photo-placeholder">
-            <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">
-              <img src="REPLACE: assets/miYYYY-poster.jpg" alt="REPLACE: Mathematical Inception YYYY poster with dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
+            <a href="REPLACE: assets/miYYYY-xxx-poster.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="REPLACE: assets/miYYYY-xxx-poster.jpg" alt="REPLACE: MIYYYY-XXX poster with dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
             </a>
-            <figcaption>REPLACE: Poster for MIYYYY. <a href="REPLACE: assets/miYYYY-poster.pdf" target="_blank" rel="noopener noreferrer">Download the full-size poster</a> to share or print.</figcaption>
+            <figcaption>REPLACE: Poster for MIYYYY-XXX. <a href="REPLACE: assets/miYYYY-xxx-poster.pdf" target="_blank" rel="noopener noreferrer">Download the full-size poster</a> to share or print.</figcaption>
           </figure>
         </section>
         <!-- ===== END SECTION 2 ===== -->
@@ -261,11 +270,11 @@
           <h2 id="gallery-title">Gallery</h2>
           <div class="video-grid">
             <figure class="photo-placeholder">
-              <img src="REPLACE: assets/miYYYY-group.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
+              <img src="REPLACE: assets/miYYYY-xxx-group.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
               <figcaption>REPLACE: Caption</figcaption>
             </figure>
             <figure class="photo-placeholder">
-              <img src="REPLACE: assets/miYYYY-session.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
+              <img src="REPLACE: assets/miYYYY-xxx-session.jpg" alt="REPLACE: Accurate description" width="1600" height="1067" loading="lazy">
               <figcaption>REPLACE: Caption</figcaption>
             </figure>
           </div>
@@ -301,7 +310,7 @@
           <!-- OPTIONAL PART · feedback videos -->
           <div class="video-grid">
             <article class="video-tile">
-              <h3>REPLACE: Video title, e.g. Students on MIYYYY</h3>
+              <h3>REPLACE: Video title, e.g. Students on MIYYYY-XXX</h3>
               <a class="video-link" href="https://www.youtube.com/watch?v=REPLACE_VIDEO_ID" target="_blank" rel="noopener noreferrer" aria-label="REPLACE: Watch VIDEO TITLE on YouTube">
                 <img src="https://i.ytimg.com/vi/REPLACE_VIDEO_ID/hqdefault.jpg" alt="" loading="lazy">
                 <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
@@ -327,8 +336,8 @@
              The editions just before and after this one, in the order of the archive in
              programmes.html. Leave out "Next" on the newest page. -->
         <nav class="content-section" aria-label="Other editions">
-          <p><a href="REPLACE: programme-YYYY.html"><span aria-hidden="true">←</span> Previous: REPLACE: Mathematical Inception YYYY</a></p>
-          <p><a href="REPLACE: programme-YYYY.html">Next: REPLACE: Mathematical Inception YYYY <span aria-hidden="true">→</span></a></p>
+          <p><a href="REPLACE: programme-YYYY.html"><span aria-hidden="true">←</span> Previous edition: REPLACE: MIYYYY-XXX Venue</a></p>
+          <p><a href="REPLACE: programme-YYYY.html">Next edition: REPLACE: MIYYYY-XXX Venue <span aria-hidden="true">→</span></a></p>
         </nav>
         <!-- ===== END OTHER EDITIONS ===== -->
       </div>
@@ -338,8 +347,8 @@
            copy it unchanged from index.html whenever the homepage's version changes. -->
       <aside class="home-announcement" aria-labelledby="announcement-title">
         <p class="eyebrow">Upcoming programmes</p>
-        <h2 id="announcement-title">Mathematical Inception Dharapuram - 2027</h2>
-        <p>Location: Dharapuram, Tamil Nadu</p>
+        <h2 id="announcement-title">MI2027-DPR</h2>
+        <p>Location: Veveaham School, Dharapuram, Tamil Nadu</p>
         <a class="programme-announcements-box" href="programmes.html#upcoming">Programme announcements <span aria-hidden="true">→</span></a>
       </aside>
     </div>
