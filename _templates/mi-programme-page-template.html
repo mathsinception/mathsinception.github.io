@@ -18,9 +18,14 @@
                        Gallery and In their words once approved, Contact
 
   Conventions
-    Edition name   code + venue, e.g. MI2026-DPM Veveaham School (DPM Dharapuram,
-                   BLR Bengaluru); the same in <title>, h1 and the archive.
-    Images         assets/miYYYY-xxx-name.jpg, ~1600 px, real width/height, honest alt text.
+    Edition code   MIYYYY-PPP: year of the edition, then a fixed three-letter place code.
+                     DPM  Dharapuram       e.g. MI2026-DPM
+                     BLR  Bengaluru        e.g. MI2026-BLR
+                   A new place gets a new code, added to this list; a code never changes.
+    Edition name   code + venue, e.g. MI2026-DPM Veveaham School; identical in <title>,
+                   h1, the archive in programmes.html and the previous/next links.
+    Images         assets/miYYYY-ppp-name.jpg, e.g. mi2026-dpm-group.jpg; ~1600 px,
+                   real width/height, honest alt text.
     Style          Existing classes only. Short factual sentences. Unready sections are
                    wrapped in an HTML comment, not published empty.
     Shared parts   Header, "Upcoming programmes" box and footer come from index.html;
@@ -30,8 +35,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{code} {venue} | Mathematical Inception Trust</title>
-  <meta name="description" content="{code}, the {nth} edition of Mathematical Inception: a {n}-day residential mathematics programme at {venue}, {town}, {dates}.">
+  <title>MI{YYYY}-{PPP} {venue} | Mathematical Inception Trust</title>
+  <meta name="description" content="MI{YYYY}-{PPP}, the {nth} edition of Mathematical Inception: a {n}-day residential mathematics programme at {venue}, {town}, {dates}.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
@@ -60,8 +65,8 @@
 
         <!-- Intro -->
         <header class="page-intro">
-          <p class="eyebrow">{code} · {Nth} edition</p>
-          <h1 id="page-title">{code} {venue}</h1>
+          <p class="eyebrow">MI{YYYY}-{PPP} · {Nth} edition</p>
+          <h1 id="page-title">MI{YYYY}-{PPP} {venue}</h1>
           <p class="intro-text">A {n}-day residential programme at {venue}, {town}, {dates}.</p>
         </header>
 
@@ -89,7 +94,7 @@
         <section id="status" class="content-section" aria-label="Edition status">
           <div class="upcoming-panel">
             <span class="status-label">Applications open</span>
-            <h3>{code} {venue}</h3>
+            <h3>MI{YYYY}-{PPP} {venue}</h3>
             <p>Applications close on {deadline}.</p>
             <a href="#apply">How to apply <span aria-hidden="true">↓</span></a>
           </div>
@@ -104,7 +109,7 @@
             <div><dt>Dates</dt><dd>{dates}</dd></div>
             <div><dt>Venue</dt><dd>{venue}, {town}<br><a href="{maps link}" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></dd></div>
             <div><dt>Format</dt><dd>Fully residential, {n} days</dd></div>
-            <div><dt>Eligibility</dt><dd>Students who complete Class 10 in {year}</dd></div>
+            <div><dt>Eligibility</dt><dd>Students who complete Class 10 in {YYYY}</dd></div>
             <div><dt>Fee</dt><dd>Free, including food and accommodation. Students arrange their own travel.</dd></div>
             <div><dt>Host and sponsor</dt><dd>{host}, {town}</dd></div>
             <div><dt>Apply by</dt><dd>{deadline}<br><a href="#apply">How to apply</a></dd></div>
@@ -119,7 +124,7 @@
         <section id="apply" class="content-section" aria-labelledby="apply-title">
           <h2 id="apply-title">Who can apply</h2>
           <ul>
-            <li>Students who complete Class 10 in {year}, from any board</li>
+            <li>Students who complete Class 10 in {YYYY}, from any board</li>
             <li>An interest in mathematics; no competition experience is needed</li>
             <li>Able to stay on campus for all {n} days</li>
           </ul>
@@ -128,11 +133,11 @@
           <dl class="programme-facts">
             <div><dt>Apply by</dt><dd>{deadline}</dd></div>
             <div><dt>Selection list</dt><dd>Published on this page by {date}</dd></div>
-            <div><dt>Application form</dt><dd><a href="{form link}" target="_blank" rel="noopener noreferrer">Apply for {code} <span aria-hidden="true">↗</span></a></dd></div>
+            <div><dt>Application form</dt><dd><a href="{form link}" target="_blank" rel="noopener noreferrer">Apply for MI{YYYY}-{PPP} <span aria-hidden="true">↗</span></a></dd></div>
           </dl>
           <figure class="photo-placeholder">
             <a href="assets/{poster}.pdf" target="_blank" rel="noopener noreferrer">
-              <img src="assets/{poster}.jpg" alt="{code} poster: dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
+              <img src="assets/{poster}.jpg" alt="MI{YYYY}-{PPP} poster: dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
             </a>
             <figcaption><a href="assets/{poster}.pdf" target="_blank" rel="noopener noreferrer">Download the poster</a> to share or print.</figcaption>
           </figure>
@@ -229,8 +234,8 @@
 
         <!-- Other editions · archive order; omit "Next" on the newest page -->
         <nav class="content-section" aria-label="Other editions">
-          <p><a href="{previous page}"><span aria-hidden="true">←</span> Previous edition: {code} {venue}</a></p>
-          <p><a href="{next page}">Next edition: {code} {venue} <span aria-hidden="true">→</span></a></p>
+          <p><a href="{previous page}"><span aria-hidden="true">←</span> Previous edition: MI{YYYY}-{PPP} {venue}</a></p>
+          <p><a href="{next page}">Next edition: MI{YYYY}-{PPP} {venue} <span aria-hidden="true">→</span></a></p>
         </nav>
 
       </div>

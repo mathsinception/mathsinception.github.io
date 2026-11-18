@@ -100,9 +100,20 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 `_templates/mi-programme-page-template.html` is a complete programme page with every section an edition can use. GitHub Pages does not publish folders that start with `_`, so it never appears on the live site. `programme-2026.html` is a finished example.
 
 1. Copy the template to the site root as `programme-YYYY.html` (or `programme-YYYY-place.html` when a year has two editions).
-2. Fill in every `{placeholder}`; `grep -n "{" programme-YYYY.html` shows what is left. Name the edition by code and venue, for example `MI2026-DPM Veveaham School`.
+2. Fill in every `{placeholder}`; `grep -n "{" programme-YYYY.html` shows what is left. Name the edition by its code and venue, for example `MI2026-DPM Veveaham School`.
 3. Keep the sections for the edition's stage, as listed at the top of the template, and their links under "On this page". Sections that are not ready stay inside an HTML comment rather than being published empty.
 4. Add the edition to the archive in `programmes.html`, and update the previous and next links on the neighbouring pages.
+
+### Edition codes
+
+Every edition has a fixed code of the form `MIYYYY-PPP`: the year of the edition, a hyphen, and a three-letter code for the place. The same code is used in the page title, the heading, the programmes archive, the upcoming-programmes box and image file names (in lower case, for example `mi2026-dpm-group.jpg`).
+
+| Code | Place |
+| --- | --- |
+| `DPM` | Dharapuram |
+| `BLR` | Bengaluru |
+
+A new place gets a new three-letter code, added to this table. Codes are never changed once used.
 
 ### Where things are on a programme page
 
