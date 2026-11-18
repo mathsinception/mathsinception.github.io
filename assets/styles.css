@@ -122,6 +122,11 @@ p { margin-bottom: 1.15rem; }
   color: #182f4b;
   text-decoration: none;
 }
+.home-announcement .sidebar-block[aria-current="page"] {
+  border-color: #f0d7b4;
+  background: #c3a77a;
+  color: #182f4b;
+}
 .page-intro { padding-block: 3.75rem 3rem; border-bottom: 1px solid var(--line); }
 .page-intro .intro-text { margin-bottom: 0; }
 
