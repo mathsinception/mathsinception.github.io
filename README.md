@@ -162,4 +162,5 @@ The IIT Bombay personal-page reference could not be loaded reliably. This is an 
 
 Check all six HTML pages, their local links, page titles and images in a desktop and mobile browser before making the site public.
 
-
+## Acknowledgements
+We have used Chalkduster font from https://www.onlinewebfonts.com/download/bd9805cba4fdbd10e6f9d097dab9225f
