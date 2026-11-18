@@ -183,6 +183,9 @@ p { margin-bottom: 1.15rem; }
 .footer-inner > a { color: #fff; }
 .footer-inner > a:hover { color: #f0d7b4; }
 .footer-brand { display: flex; align-items: center; }
+.footer-contact { font-size: .875rem; }
+.footer-contact a { color: #fff; text-underline-offset: .22em; }
+.footer-contact a:hover { color: #f0d7b4; }
 
 .footer-top-link { justify-self: end; font-size: .875rem; white-space: nowrap; }
 
