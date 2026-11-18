@@ -1,17 +1,42 @@
 <!doctype html>
-<!-- Built from _templates/mi-programme-page-template.html (completed edition). -->
+<!--
+  PROGRAMME PAGE: MI2026-DPM Veveaham School (fourth edition, completed)
+  Built from _templates/mi-programme-page-template.html. Every part below is marked
+  with a "PART" comment, so it can be found by searching for the words in brackets.
+
+  SHARED WITH THE REST OF THE SITE (Meghana's components: change them in index.html
+  first, then copy them here unchanged)
+    Site header and logos ........ [site-header]
+    Upcoming programmes box ...... [home-announcement]
+    Footer ....................... [site-footer]
+    Stylesheet version ........... [styles.css?v=]
+
+  THIS EDITION'S CONTENT
+    Browser-tab title, description [<title>]
+    Edition code, title, intro ... [PART: Intro]          id="page-title"
+    "On this page" menu .......... [PART: On this page]   class="page-index"
+    About and key facts .......... [PART: About]          id="overview"
+    What students learned ........ [PART: Programme]      id="programme"
+    The week ..................... [PART: The week]       id="week"
+    Who taught ................... [PART: People]         id="people"
+    Gallery (hidden for now) ..... [HIDDEN until approved MI2026 photos]
+    In their words (hidden) ...... [HIDDEN until MI2026 quotes]
+    Contact ...................... [PART: Contact]        id="contact"
+    Previous / next edition ...... [PART: Other editions] aria-label="Other editions"
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MI2026-DPR Veveaham School | Mathematical Inception Trust</title>
-  <meta name="description" content="MI2026-DPR, the fourth edition of Mathematical Inception: a six-day residential mathematics programme at Veveaham Schools, Dharapuram, 1–6 May 2026.">
+  <title>MI2026-DPM Veveaham School | Mathematical Inception Trust</title>
+  <meta name="description" content="MI2026-DPM, the fourth edition of Mathematical Inception: a six-day residential mathematics programme at Veveaham Schools, Dharapuram, 1–6 May 2026.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <!-- SHARED: Site header and logos · Meghana's component, copied unchanged from index.html -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
@@ -29,12 +54,14 @@
   <main id="main" class="container">
     <div class="page-layout home-layout">
       <div class="home-main">
+        <!-- PART: Intro · edition code, title and one-line summary -->
         <header class="page-intro">
-          <p class="eyebrow">MI2026-DPR · Fourth edition</p>
-          <h1 id="page-title">MI2026-DPR Veveaham School</h1>
+          <p class="eyebrow">MI2026-DPM · Fourth edition</p>
+          <h1 id="page-title">MI2026-DPM Veveaham School</h1>
           <p class="intro-text">A six-day residential programme at Veveaham Schools, Dharapuram, 1–6 May 2026.</p>
         </header>
         <div class="page-layout">
+      <!-- PART: On this page · one link per visible section, same words as the headings -->
       <aside class="page-sidebar">
         <details class="page-index">
           <summary>On this page</summary>
@@ -49,6 +76,7 @@
         </details>
       </aside>
       <div class="page-content">
+        <!-- PART: About · what the programme is, then the key facts grid -->
         <section id="overview" class="content-section" aria-labelledby="overview-title">
           <h2 id="overview-title">About this edition</h2>
           <p>Mathematical Inception is a free, residential programme for students who have just completed Class 10. Rather than covering a lot of content, it helps students learn how to think: they work on carefully chosen problems, discuss ideas with one another and learn from mathematicians who explain their reasoning as they go.</p>
@@ -63,6 +91,7 @@
           </dl>
         </section>
 
+        <!-- PART: Programme · the three strands of the mathematics -->
         <section id="programme" class="content-section" aria-labelledby="programme-title">
           <h2 id="programme-title">What students learned</h2>
           <p>The mathematics was built up in three stages over the week.</p>
@@ -73,19 +102,16 @@
           </div>
         </section>
 
+        <!-- PART: The week · daily rhythm -->
         <section id="week" class="content-section" aria-labelledby="week-title">
           <h2 id="week-title">The week</h2>
           <p>Each day had four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
-          <dl class="programme-facts">
-            <div><dt>Day 1 · Fri, 1 May</dt><dd>Inauguration. Sessions with Ananthnarayan H. and Arusha C. Evening sports.</dd></div>
-            <div><dt>Day 2 · Sat, 2 May</dt><dd>Sessions with Arusha C, Mohan R and Vignesh, and a guest lecture by C R Pradeep. Evening concert.</dd></div>
-            <div><dt>Day 3 · Sun, 3 May</dt><dd>Sessions with Vignesh, Omkar Javadekar and Vallmuthu. Evening sports.</dd></div>
-            <div><dt>Day 4 · Mon, 4 May</dt><dd>Sessions with Vallmuthu, Omkar Javadekar and Elanchearan R. S. Movie night.</dd></div>
-            <div><dt>Day 5 · Tue, 5 May</dt><dd>Sessions with Shailesh Goregaokar and Elanchearan R. S., and a guidance session on higher studies. Book reading.</dd></div>
-            <div><dt>Day 6 · Wed, 6 May</dt><dd>Final sessions with Elanchearan R. S. and Shailesh Goregaokar, then the valedictory function. Students travelled home in the afternoon.</dd></div>
-          </dl>
+          <!-- EDIT: Day-by-day details can be added here later, one row per day, only where a day
+               has something worth telling a reader. Copy the "completed editions" day list
+               from the template (_templates/mi-programme-page-template.html, section 4). -->
         </section>
 
+        <!-- PART: People · instructors and guest speakers -->
         <section id="people" class="content-section" aria-labelledby="people-title">
           <h2 id="people-title">Who taught</h2>
           <h3>Instructors</h3>
@@ -150,6 +176,7 @@
         </section>
         END HIDDEN voices -->
 
+        <!-- PART: Contact · email and phone for this edition -->
         <section id="contact" class="content-section" aria-labelledby="contact-title">
           <h2 id="contact-title">Contact</h2>
           <p>For questions about this edition or about joining a future one.</p>
@@ -159,13 +186,15 @@
           </dl>
         </section>
 
+        <!-- PART: Other editions · previous and next pages, in programmes.html archive order -->
         <nav class="content-section" aria-label="Other editions">
-          <p><a href="programme-2025.html"><span aria-hidden="true">←</span> Previous edition: MI2025-DPR Veveaham School</a></p>
+          <p><a href="programme-2025.html"><span aria-hidden="true">←</span> Previous edition: MI2025-DPM Veveaham School</a></p>
           <p><a href="programme-2026-ppec-bengaluru.html">Next edition: MI2026-BLR PPEC Bengaluru <span aria-hidden="true">→</span></a></p>
         </nav>
           </div>
         </div>
       </div>
+      <!-- SHARED: Upcoming programmes box · Meghana's component, copied unchanged from index.html -->
       <aside class="home-announcement" aria-labelledby="announcement-title">
         <p class="eyebrow">Upcoming programmes</p>
         <h2 id="announcement-title">MI2027-DPR</h2>
@@ -175,6 +204,7 @@
     </div>
   </main>
 
+  <!-- SHARED: Footer · Meghana's component, same on every programme page -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">

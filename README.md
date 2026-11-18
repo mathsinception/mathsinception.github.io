@@ -100,12 +100,33 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 `_templates/mi-programme-page-template.html` gives every edition the same simple page, in the order a visitor asks: About this edition (with key facts), Who can apply (upcoming editions), What students learn, The week, Who teaches, Gallery and In their words (completed editions), Contact, and links to the previous and next editions. GitHub Pages does not publish folders that start with `_`, so the template never appears on the live site. `programme-2026.html` is a finished example.
 
 1. Copy the template to the website root as `programme-YYYY.html` (add the place if a year has two editions, for example `programme-2026-ppec-bengaluru.html`).
-2. Replace every `REPLACE:` value with confirmed details. Name the edition by its code and venue, for example `MI2026-DPR Veveaham School`, exactly as in the `programmes.html` archive.
+2. Replace every `REPLACE:` value with confirmed details. Name the edition by its code and venue, for example `MI2026-DPM Veveaham School`, and use the same name in the `programmes.html` archive.
 3. Remove what the edition does not need. Each section runs from its `SECTION` comment to its `END SECTION` comment, and smaller parts inside a section are marked `OPTIONAL PART`. Also remove the section's link under "On this page". Never publish an empty section: if photos, quotes or videos are not ready, keep that section inside an HTML comment until they are, as `programme-2026.html` does.
 4. Search the new page for `REPLACE:`. Nothing should be left.
 5. Add a matching `archive-entry` in `programmes.html`, newest first, and update the previous and next links on the neighbouring edition pages.
 
-The comment at the top of the template explains how one page is updated through an edition's life: announced, applications closed, selection published, and after the workshop. Every block uses the existing styles, so no stylesheet change is needed.
+The comment at the top of the template explains how one page is updated through an edition's life: announced, applications closed, selection published, and after the programme. Every block uses the existing styles, so no stylesheet change is needed.
+
+### Where things are on a programme page
+
+Each part of `programme-2026.html` and of the template is marked with a comment, and the top of each file lists them all. Parts marked `SHARED:` are the site-wide components from `index.html`: change them there first, then copy them unchanged into the programme pages.
+
+| What you want to change | Where | What to search for |
+| --- | --- | --- |
+| Site header and logos (shared) | Every page | `SHARED: Site header` or `site-header` |
+| Upcoming programmes box (shared) | Every page | `SHARED: Upcoming programmes` or `home-announcement` |
+| Footer (shared) | Every page | `SHARED: Footer` or `site-footer` |
+| Browser-tab title and search description | Programme page | `<title>` and `name="description"` |
+| Edition code, title and one-line summary | Programme page | `PART: Intro` (template: `INTRO`) |
+| "On this page" menu | Programme page | `PART: On this page` or `page-index` |
+| About and key facts (dates, venue, fee, host) | Programme page | `PART: About` or `id="overview"` |
+| What students learned | Programme page | `PART: Programme` or `id="programme"` |
+| The week | Programme page | `PART: The week` or `id="week"` |
+| Instructors and guest speakers | Programme page | `PART: People` or `id="people"` |
+| Gallery and student quotes (hidden until approved) | Programme page | `HIDDEN until` |
+| Contact for the edition | Programme page | `PART: Contact` or `id="contact"` |
+| Previous and next edition links | Programme page | `PART: Other editions` |
+| Sections still to fill in a new page | Template copy | `REPLACE:` |
 
 ## Change the appearance
 

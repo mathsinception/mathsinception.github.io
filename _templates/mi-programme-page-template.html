@@ -26,11 +26,24 @@
     Other editions ...... links to the previous and next edition pages
 
   NAMING AN EDITION
-    Each edition has a code: MI + year + a three-letter place code, e.g. MI2026-DPR
+    Each edition has a code: MI + year + a three-letter place code, e.g. MI2026-DPM
     (Dharapuram) or MI2026-BLR (Bengaluru). The page title is the code followed by the
-    venue, e.g. "MI2026-DPR Veveaham School", written exactly as in the programmes.html
-    archive. Use the same name in <title>, the h1, the archive entry and the
-    "Other editions" links of the neighbouring pages.
+    venue, e.g. "MI2026-DPM Veveaham School". Use the same name in <title>, the h1, the
+    archive entry in programmes.html and the "Other editions" links of the neighbouring pages.
+
+  WHERE THINGS ARE
+    Shared with the rest of the site (Meghana's components; change them in index.html
+    first, then copy them here unchanged). Each is marked with a "SHARED:" comment.
+      Site header and logos ........ search  site-header
+      Upcoming programmes box ...... search  home-announcement
+      Footer ....................... search  site-footer
+      Stylesheet version ........... search  styles.css?v=
+    This edition's content. Each part is marked with a "SECTION" comment.
+      Browser-tab title ............ search  <title>
+      Edition code, title, intro ... search  INTRO           (id="page-title")
+      "On this page" menu .......... search  ON THIS PAGE    (class="page-index")
+      Sections 1–8 ................. search  SECTION 1 … SECTION 8
+      Previous / next edition ...... search  OTHER EDITIONS
 
   HOW TO USE
   1. Copy this file to the website root as programme-YYYY.html
@@ -85,7 +98,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Site header: identical on every page. Do not edit. -->
+  <!-- SHARED: Site header and logos · Meghana's component, copied unchanged from index.html -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
@@ -219,8 +232,10 @@
 
         <!-- ===== SECTION 4 · THE WEEK · OPTIONAL =====
              Upcoming edition: keep the activities list, delete the days.
-             Completed edition: keep the days (from the final timetable, highlights only,
-             no clock times), delete the activities list. -->
+             Completed edition: delete the activities list. Add the day-by-day list only when
+             each day has something worth telling a reader (what was explored, a talk, an
+             event). A list of who taught on which day is not enough; leave the days out
+             rather than publish that. No clock times. -->
         <section id="week" class="content-section" aria-labelledby="week-title">
           <h2 id="week-title">The week</h2>
           <p>REPLACE: The daily rhythm, e.g. Each day has four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
@@ -343,7 +358,7 @@
       </div>
         </div>
       </div>
-      <!-- Upcoming-programmes sidebar: shared by every page. Do not edit here;
+      <!-- SHARED: Upcoming programmes box · Meghana's component. Do not edit here;
            copy it unchanged from index.html whenever the homepage's version changes. -->
       <aside class="home-announcement" aria-labelledby="announcement-title">
         <p class="eyebrow">Upcoming programmes</p>
@@ -354,7 +369,7 @@
     </div>
   </main>
 
-  <!-- Site footer: identical on every programme page. Do not edit. -->
+  <!-- SHARED: Footer · Meghana's component, same on every programme page. Do not edit. -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
