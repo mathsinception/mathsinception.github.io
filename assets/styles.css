@@ -104,6 +104,24 @@ p { margin-bottom: 1.15rem; }
 .home-announcement a { font-size: .9rem; font-weight: 600; }
 .home-announcement .programme-announcements-box { display: block; margin-top: 1.2rem; padding: .75rem .85rem; border: 1px solid #c3a77a; background: #f3ede4; color: #182f4b; line-height: 1.4; text-decoration: none; }
 .home-announcement .programme-announcements-box:hover { background: #fff; color: #182f4b; }
+.sidebar-blocks { display: grid; gap: .75rem; }
+.home-announcement .sidebar-block {
+  display: block;
+  padding: .85rem 1rem;
+  border: 1px solid #c3a77a;
+  background: #f3ede4;
+  color: #182f4b;
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-decoration: none;
+}
+.home-announcement .sidebar-block:hover {
+  background: #fff;
+  color: #182f4b;
+  text-decoration: none;
+}
 .page-intro { padding-block: 3.75rem 3rem; border-bottom: 1px solid var(--line); }
 .page-intro .intro-text { margin-bottom: 0; }
 
