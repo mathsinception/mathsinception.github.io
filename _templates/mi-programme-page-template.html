@@ -1,0 +1,265 @@
+<!doctype html>
+<!--
+  Programme page template · Mathematical Inception
+  (Not published: GitHub Pages skips folders starting with "_".)
+
+  To make a page
+    1. Copy to the site root as programme-YYYY.html, or programme-YYYY-place.html
+       when a year has two editions.
+    2. Fill in every {placeholder}. Check with:  grep -n "{" programme-YYYY.html
+    3. Keep the sections for the edition's stage (below) and their "On this page" links.
+    4. Add the edition to the archive in programmes.html, and update the
+       previous/next links on the neighbouring pages.
+
+  Stage                Keep
+    Upcoming           Status, About (with "Apply by"), Who can apply, What students learn,
+                       The week (activities), Who teaches, Contact
+    Completed          About, What students learned, The week (days), Who taught,
+                       Gallery and In their words once approved, Contact
+
+  Conventions
+    Edition code   MIYYYY-PPP: year of the edition, then a fixed three-letter place code.
+                     DPM  Dharapuram       e.g. MI2026-DPM
+                     BLR  Bengaluru        e.g. MI2026-BLR
+                   A new place gets a new code, added to this list; a code never changes.
+    Edition name   code + venue, e.g. MI2026-DPM Veveaham School; identical in <title>,
+                   h1, the archive in programmes.html and the previous/next links.
+    Images         assets/miYYYY-ppp-name.jpg, e.g. mi2026-dpm-group.jpg; ~1600 px,
+                   real width/height, honest alt text.
+    Style          Existing classes only. Short factual sentences. Unready sections are
+                   wrapped in an HTML comment, not published empty.
+    Shared parts   Header, "Upcoming programmes" box and footer come from index.html;
+                   change them there and copy across.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MI{YYYY}-{PPP} {venue} | Mathematical Inception Trust</title>
+  <meta name="description" content="MI{YYYY}-{PPP}, the {nth} edition of Mathematical Inception: a {n}-day residential mathematics programme at {venue}, {town}, {dates}.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared: header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
+        <img class="brand-logo brand-logo-left" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
+        <span class="brand-text">Mathematical<br>Inception<br>Trust</span>
+        <img class="brand-logo brand-logo-right" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="programmes.html" aria-current="page">Programmes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-layout home-layout">
+      <div class="home-main">
+
+        <!-- Intro -->
+        <header class="page-intro">
+          <p class="eyebrow">MI{YYYY}-{PPP} · {Nth} edition</p>
+          <h1 id="page-title">MI{YYYY}-{PPP} {venue}</h1>
+          <p class="intro-text">A {n}-day residential programme at {venue}, {town}, {dates}.</p>
+        </header>
+
+        <div class="page-layout">
+      <aside class="page-sidebar">
+        <details class="page-index">
+          <summary>On this page</summary>
+          <nav aria-label="On this page">
+            <a href="#overview">About this edition</a>
+            <a href="#apply">Who can apply</a>
+            <a href="#programme">What students learn</a>
+            <a href="#week">The week</a>
+            <a href="#people">Who teaches</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#voices">In their words</a>
+            <a href="#contact">Contact</a>
+            <a href="programmes.html#past">All past programmes</a>
+          </nav>
+        </details>
+      </aside>
+
+      <div class="page-content">
+
+        <!-- Status · upcoming only. Applications open / closed / Selection list published -->
+        <section id="status" class="content-section" aria-label="Edition status">
+          <div class="upcoming-panel">
+            <span class="status-label">Applications open</span>
+            <h3>MI{YYYY}-{PPP} {venue}</h3>
+            <p>Applications close on {deadline}.</p>
+            <a href="#apply">How to apply <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="overview" class="content-section" aria-labelledby="overview-title">
+          <h2 id="overview-title">About this edition</h2>
+          <p>Mathematical Inception is a free, residential programme for students who have just completed Class 10. Rather than covering a lot of content, it helps students learn how to think: they work on carefully chosen problems, discuss ideas with one another and learn from mathematicians who explain their reasoning as they go.</p>
+          <p>This edition is hosted and sponsored by {host}, which makes it free for every participant.</p>
+          <dl class="programme-facts">
+            <div><dt>Dates</dt><dd>{dates}</dd></div>
+            <div><dt>Venue</dt><dd>{venue}, {town}<br><a href="{maps link}" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></dd></div>
+            <div><dt>Format</dt><dd>Fully residential, {n} days</dd></div>
+            <div><dt>Eligibility</dt><dd>Students who complete Class 10 in {YYYY}</dd></div>
+            <div><dt>Fee</dt><dd>Free, including food and accommodation. Students arrange their own travel.</dd></div>
+            <div><dt>Host and sponsor</dt><dd>{host}, {town}</dd></div>
+            <div><dt>Apply by</dt><dd>{deadline}<br><a href="#apply">How to apply</a></dd></div>
+            <!-- Completed editions: confirmed figures, in place of "Apply by"
+            <div><dt>Students</dt><dd>{n}</dd></div>
+            <div><dt>Schools</dt><dd>{n}</dd></div>
+            -->
+          </dl>
+        </section>
+
+        <!-- Who can apply · upcoming only -->
+        <section id="apply" class="content-section" aria-labelledby="apply-title">
+          <h2 id="apply-title">Who can apply</h2>
+          <ul>
+            <li>Students who complete Class 10 in {YYYY}, from any board</li>
+            <li>An interest in mathematics; no competition experience is needed</li>
+            <li>Able to stay on campus for all {n} days</li>
+          </ul>
+          <h3>How to apply</h3>
+          <p>Apply through the online form. Seats are limited; participants are selected on the basis of their answers in the form.</p>
+          <dl class="programme-facts">
+            <div><dt>Apply by</dt><dd>{deadline}</dd></div>
+            <div><dt>Selection list</dt><dd>Published on this page by {date}</dd></div>
+            <div><dt>Application form</dt><dd><a href="{form link}" target="_blank" rel="noopener noreferrer">Apply for MI{YYYY}-{PPP} <span aria-hidden="true">↗</span></a></dd></div>
+          </dl>
+          <figure class="photo-placeholder">
+            <a href="assets/{poster}.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="assets/{poster}.jpg" alt="MI{YYYY}-{PPP} poster: dates, venue, eligibility and how to apply" width="480" height="679" loading="lazy">
+            </a>
+            <figcaption><a href="assets/{poster}.pdf" target="_blank" rel="noopener noreferrer">Download the poster</a> to share or print.</figcaption>
+          </figure>
+        </section>
+
+        <!-- What students learn · past tense for completed editions -->
+        <section id="programme" class="content-section" aria-labelledby="programme-title">
+          <h2 id="programme-title">What students learn</h2>
+          <p>The mathematics is built up in three stages over the week.</p>
+          <div class="approach-list">
+            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>Mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>Observing patterns, making conjectures and proving them independently.</p></div></div>
+          </div>
+        </section>
+
+        <!-- The week · upcoming: the list; completed: one row per day, saying what made it memorable -->
+        <section id="week" class="content-section" aria-labelledby="week-title">
+          <h2 id="week-title">The week</h2>
+          <p>Each day has four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
+          <ul>
+            <li>A guidance session on higher studies</li>
+            <li>A music concert and a movie night</li>
+            <li>Sports every evening</li>
+          </ul>
+          <dl class="programme-facts">
+            <div><dt>Day 1 · {weekday, date}</dt><dd>{highlight}</dd></div>
+            <div><dt>Day 2 · {weekday, date}</dt><dd>{highlight}</dd></div>
+            <div><dt>Day 3 · {weekday, date}</dt><dd>{highlight}</dd></div>
+          </dl>
+        </section>
+
+        <!-- Who teaches · "Who taught" for completed editions -->
+        <section id="people" class="content-section" aria-labelledby="people-title">
+          <h2 id="people-title">Who teaches</h2>
+          <h3>Instructors</h3>
+          <ul>
+            <li>{Name}, {affiliation}</li>
+          </ul>
+          <h3>Guest speakers</h3>
+          <ul>
+            <li>{Name}, {affiliation}</li>
+          </ul>
+        </section>
+
+        <!-- Gallery · completed only: two or four approved photos, group photo first -->
+        <section id="gallery" class="content-section" aria-labelledby="gallery-title">
+          <h2 id="gallery-title">Gallery</h2>
+          <div class="video-grid">
+            <figure class="photo-placeholder">
+              <img src="assets/{photo}.jpg" alt="{description}" width="1600" height="1067" loading="lazy">
+              <figcaption>{caption}</figcaption>
+            </figure>
+            <figure class="photo-placeholder">
+              <img src="assets/{photo}.jpg" alt="{description}" width="1600" height="1067" loading="lazy">
+              <figcaption>{caption}</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- In their words · completed only: quotes used with consent, first name and town only -->
+        <section id="voices" class="content-section" aria-labelledby="voices-title">
+          <h2 id="voices-title">In their words</h2>
+          <div class="video-grid">
+            <article class="student-story">
+              <p>“{quote}”</p>
+              <p><strong>{First name}</strong>, {town}</p>
+            </article>
+            <article class="student-story">
+              <p>“{quote}”</p>
+              <p><strong>{First name}</strong>, {town}</p>
+            </article>
+          </div>
+          <div class="video-grid">
+            <article class="video-tile">
+              <h3>{video title}</h3>
+              <a class="video-link" href="https://www.youtube.com/watch?v={video id}" target="_blank" rel="noopener noreferrer" aria-label="Watch {video title} on YouTube">
+                <img src="https://i.ytimg.com/vi/{video id}/hqdefault.jpg" alt="" loading="lazy">
+                <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="content-section" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>For questions about this edition or about applying.</p>
+          <dl class="programme-facts">
+            <div><dt>Email</dt><dd><a href="mailto:maths.inception@gmail.com">maths.inception@gmail.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+91{phone}">{phone}</a></dd></div>
+          </dl>
+        </section>
+
+        <!-- Other editions · archive order; omit "Next" on the newest page -->
+        <nav class="content-section" aria-label="Other editions">
+          <p><a href="{previous page}"><span aria-hidden="true">←</span> Previous edition: MI{YYYY}-{PPP} {venue}</a></p>
+          <p><a href="{next page}">Next edition: MI{YYYY}-{PPP} {venue} <span aria-hidden="true">→</span></a></p>
+        </nav>
+
+      </div>
+        </div>
+      </div>
+
+      <!-- Shared: upcoming programmes box -->
+      <aside class="home-announcement" aria-labelledby="announcement-title">
+        <p class="eyebrow">Upcoming programmes</p>
+        <h2 id="announcement-title">MI2027-DPM</h2>
+        <p>Location: Veveaham School, Dharapuram, Tamil Nadu</p>
+        <a class="programme-announcements-box" href="programmes.html#upcoming">Programme announcements <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Shared: footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="footer-home-link" href="#page-title"><strong>Mathematical Inception Trust</strong></a>
+      </div>
+      <a href="programmes.html#past">Back to past programmes</a>
+    </div>
+  </footer>
+</body>
+</html>

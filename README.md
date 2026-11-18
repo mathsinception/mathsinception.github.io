@@ -95,6 +95,45 @@ Each past programme has its own local page. The archive in `programmes.html` lin
 
 To add photos, replace the `photo-placeholder-frame` in that edition's `photos` section with an image, for example `<img src="assets/mi2026-workshop.jpg" alt="A concise description of the photo">`. Put the approved photo in `assets/` and write accurate alternative text.
 
+## Create a programme page from the template
+
+`_templates/mi-programme-page-template.html` is a complete programme page with every section an edition can use. GitHub Pages does not publish folders that start with `_`, so it never appears on the live site. `programme-2026.html` is a finished example.
+
+1. Copy the template to the site root as `programme-YYYY.html` (or `programme-YYYY-place.html` when a year has two editions).
+2. Fill in every `{placeholder}`; `grep -n "{" programme-YYYY.html` shows what is left. Name the edition by its code and venue, for example `MI2026-DPM Veveaham School`.
+3. Keep the sections for the edition's stage, as listed at the top of the template, and their links under "On this page". Sections that are not ready stay inside an HTML comment rather than being published empty.
+4. Add the edition to the archive in `programmes.html`, and update the previous and next links on the neighbouring pages.
+
+### Edition codes
+
+Every edition has a fixed code of the form `MIYYYY-PPP`: the year of the edition, a hyphen, and a three-letter code for the place. The same code is used in the page title, the heading, the programmes archive, the upcoming-programmes box and image file names (in lower case, for example `mi2026-dpm-group.jpg`).
+
+| Code | Place |
+| --- | --- |
+| `DPM` | Dharapuram |
+| `BLR` | Bengaluru |
+
+A new place gets a new three-letter code, added to this table. Codes are never changed once used.
+
+### Where things are on a programme page
+
+| What you want to change | What to search for |
+| --- | --- |
+| Header and logos (shared with `index.html`) | `site-header` |
+| Upcoming programmes box (shared with `index.html`) | `home-announcement` |
+| Footer (shared) | `site-footer` |
+| Browser-tab title and search description | `<title>` and `name="description"` |
+| Edition code, title and one-line summary | `page-intro` |
+| "On this page" menu | `page-index` |
+| About and key facts | `id="overview"` |
+| Who can apply (upcoming editions) | `id="apply"` |
+| What students learn | `id="programme"` |
+| The week | `id="week"` |
+| Instructors and guest speakers | `id="people"` |
+| Gallery and student quotes | `id="gallery"` and `id="voices"` |
+| Contact | `id="contact"` |
+| Previous and next edition links | `Other editions` |
+
 ## Change the appearance
 
 The top of `assets/styles.css` has design variables shared by both pages:

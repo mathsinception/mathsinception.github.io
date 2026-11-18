@@ -1,16 +1,42 @@
 <!doctype html>
+<!--
+  PROGRAMME PAGE: MI2026-DPM Veveaham School (fourth edition, completed)
+  Built from _templates/mi-programme-page-template.html. Every part below is marked
+  with a "PART" comment, so it can be found by searching for the words in brackets.
+
+  SHARED WITH THE REST OF THE SITE (Meghana's components: change them in index.html
+  first, then copy them here unchanged)
+    Site header and logos ........ [site-header]
+    Upcoming programmes box ...... [home-announcement]
+    Footer ....................... [site-footer]
+    Stylesheet version ........... [styles.css?v=]
+
+  THIS EDITION'S CONTENT
+    Browser-tab title, description [<title>]
+    Edition code, title, intro ... [PART: Intro]          id="page-title"
+    "On this page" menu .......... [PART: On this page]   class="page-index"
+    About and key facts .......... [PART: About]          id="overview"
+    What students learned ........ [PART: Programme]      id="programme"
+    The week ..................... [PART: The week]       id="week"
+    Who taught ................... [PART: People]         id="people"
+    Gallery (hidden for now) ..... [HIDDEN until approved MI2026 photos]
+    In their words (hidden) ...... [HIDDEN until MI2026 quotes]
+    Contact ...................... [PART: Contact]        id="contact"
+    Previous / next edition ...... [PART: Other editions] aria-label="Other editions"
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MI2026-DPR Veveaham School | Mathematical Inception Trust</title>
-  <meta name="description" content="MI2026-DPR Veveaham School, the fourth edition of Mathematical Inception, held 1–6 May 2026.">
+  <title>MI2026-DPM Veveaham School | Mathematical Inception Trust</title>
+  <meta name="description" content="MI2026-DPM, the fourth edition of Mathematical Inception: a six-day residential mathematics programme at Veveaham Schools, Dharapuram, 1–6 May 2026.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <!-- SHARED: Site header and logos · Meghana's component, copied unchanged from index.html -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
@@ -28,51 +54,162 @@
   <main id="main" class="container">
     <div class="page-layout home-layout">
       <div class="home-main">
+        <!-- PART: Intro · edition code, title and one-line summary -->
         <header class="page-intro">
-          <p class="eyebrow">MI2026-DPR · Fourth edition</p>
-          <h1 id="page-title">MI2026-DPR Veveaham School</h1>
-          <p class="intro-text">1–6 May 2026</p>
+          <p class="eyebrow">MI2026-DPM · Fourth edition</p>
+          <h1 id="page-title">MI2026-DPM Veveaham School</h1>
+          <p class="intro-text">A six-day residential programme at Veveaham Schools, Dharapuram, 1–6 May 2026.</p>
         </header>
         <div class="page-layout">
+      <!-- PART: On this page · one link per visible section, same words as the headings -->
       <aside class="page-sidebar">
         <details class="page-index">
           <summary>On this page</summary>
           <nav aria-label="On this page">
             <a href="#overview">About this edition</a>
-            <a href="#photos">Photos</a>
+            <a href="#programme">What students learned</a>
+            <a href="#week">The week</a>
+            <a href="#people">Who taught</a>
+            <a href="#contact">Contact</a>
             <a href="programmes.html#past">All past programmes</a>
           </nav>
         </details>
       </aside>
       <div class="page-content">
+        <!-- PART: About · what the programme is, then the key facts grid -->
         <section id="overview" class="content-section" aria-labelledby="overview-title">
-          <p class="section-label">About this edition</p>
-          <h2 id="overview-title">Learning through discovery</h2>
-          <p>Mathematical Inception is a free, residential programme for students who have recently completed Class 10. Participants explore mathematical ideas, work through problems and practise explaining their reasoning.</p>
-          <!-- EDIT: Add the 2026 edition's confirmed venue, schedule, student and teacher details here. -->
+          <h2 id="overview-title">About this edition</h2>
+          <p>Mathematical Inception is a free, residential programme for students who have just completed Class 10. Rather than covering a lot of content, it helps students learn how to think: they work on carefully chosen problems, discuss ideas with one another and learn from mathematicians who explain their reasoning as they go.</p>
+          <p>The fourth edition was hosted and sponsored by Veveaham Schools, which made it free for every participant.</p>
+          <dl class="programme-facts">
+            <div><dt>Dates</dt><dd>1–6 May 2026</dd></div>
+            <div><dt>Venue</dt><dd>Veveaham Schools, Dharapuram<br><a href="https://goo.gl/maps/hZoJtvPbT4aCUaG19" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></dd></div>
+            <div><dt>Format</dt><dd>Fully residential, 6 days</dd></div>
+            <div><dt>Eligibility</dt><dd>Students who completed Class 10 in 2026</dd></div>
+            <div><dt>Fee</dt><dd>Free, including food and accommodation. Students arranged their own travel.</dd></div>
+            <div><dt>Host and sponsor</dt><dd>Veveaham Schools, Dharapuram</dd></div>
+          </dl>
         </section>
 
-        <section id="photos" class="content-section" aria-labelledby="photos-title">
-          <p class="section-label">Gallery</p>
-          <h2 id="photos-title">Moments from MI2026-01</h2>
-          <figure class="photo-placeholder">
-            <div class="photo-placeholder-frame">Add an approved MI2026-01 photo here</div>
-            <figcaption>Add a descriptive caption when you add the photo.</figcaption>
-          </figure>
-          <!-- EDIT: Replace the placeholder with approved photographs and descriptive alt text. -->
+        <!-- PART: Programme · the three strands of the mathematics -->
+        <section id="programme" class="content-section" aria-labelledby="programme-title">
+          <h2 id="programme-title">What students learned</h2>
+          <p>The mathematics was built up in three stages over the week.</p>
+          <div class="approach-list">
+            <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>Mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
+            <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>Observing patterns, making conjectures and proving them independently.</p></div></div>
+          </div>
         </section>
+
+        <!-- PART: The week · daily rhythm, then one row per day (details to be added) -->
+        <section id="week" class="content-section" aria-labelledby="week-title">
+          <h2 id="week-title">The week</h2>
+          <p>Each day had four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
+          <dl class="programme-facts">
+            <div><dt>Day 1 · Fri, 1 May</dt><dd></dd></div>
+            <div><dt>Day 2 · Sat, 2 May</dt><dd></dd></div>
+            <div><dt>Day 3 · Sun, 3 May</dt><dd></dd></div>
+            <div><dt>Day 4 · Mon, 4 May</dt><dd></dd></div>
+            <div><dt>Day 5 · Tue, 5 May</dt><dd></dd></div>
+            <div><dt>Day 6 · Wed, 6 May</dt><dd></dd></div>
+          </dl>
+        </section>
+
+        <!-- PART: People · instructors and guest speakers -->
+        <section id="people" class="content-section" aria-labelledby="people-title">
+          <h2 id="people-title">Who taught</h2>
+          <h3>Instructors</h3>
+          <ul>
+            <li>Ananthnarayan H., IIT Bombay</li>
+            <li>Arusha C, SNU Chennai</li>
+            <li>Shailesh Goregaokar, St. Xavier's College, Mumbai</li>
+            <li>Omkar Javadekar, CMI Chennai</li>
+            <li>Elanchearan R. S., IIT Madras</li>
+            <li>Vignesh, Veveaham Schools</li>
+            <li>Vallmuthu<!-- EDIT: add Vallmuthu's affiliation once confirmed. --></li>
+          </ul>
+          <h3>Guest speakers</h3>
+          <ul>
+            <li>C R Pradeep, Channabasaveshwara Institute of Technology, Gubbi</li>
+            <li>Mohan R, Azim Premji University</li>
+          </ul>
+        </section>
+
+        <!-- HIDDEN until approved MI2026 photos are in assets/. To publish: fill in, remove this
+             comment's opening and closing lines, and add <a href="#gallery">Gallery</a> to "On this page".
+        <section id="gallery" class="content-section" aria-labelledby="gallery-title">
+          <h2 id="gallery-title">Gallery</h2>
+          <div class="video-grid">
+            <figure class="photo-placeholder">
+              <img src="assets/mi2026-dpr-group.jpg" alt="DESCRIBE THE PHOTO" width="1600" height="1067" loading="lazy">
+              <figcaption>CAPTION</figcaption>
+            </figure>
+            <figure class="photo-placeholder">
+              <img src="assets/mi2026-dpr-session.jpg" alt="DESCRIBE THE PHOTO" width="1600" height="1067" loading="lazy">
+              <figcaption>CAPTION</figcaption>
+            </figure>
+          </div>
+        </section>
+        END HIDDEN gallery -->
+
+        <!-- HIDDEN until MI2026 quotes are chosen from the transcribed feedback (with consent)
+             and the feedback videos are on YouTube. Keep whichever part is ready and delete the
+             other. To publish: fill in, remove this comment's opening and closing lines, and add
+             <a href="#voices">In their words</a> to "On this page".
+        <section id="voices" class="content-section" aria-labelledby="voices-title">
+          <h2 id="voices-title">In their words</h2>
+          <div class="video-grid">
+            <article class="student-story">
+              <p>“QUOTE.”</p>
+              <p><strong>FIRST NAME</strong>, TOWN OR SCHOOL</p>
+            </article>
+            <article class="student-story">
+              <p>“QUOTE.”</p>
+              <p><strong>FIRST NAME</strong>, TOWN OR SCHOOL</p>
+            </article>
+          </div>
+          <div class="video-grid">
+            <article class="video-tile">
+              <h3>VIDEO TITLE</h3>
+              <a class="video-link" href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noopener noreferrer" aria-label="Watch VIDEO TITLE on YouTube">
+                <img src="https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg" alt="" loading="lazy">
+                <span>Watch on YouTube <span aria-hidden="true">↗</span></span>
+              </a>
+            </article>
+          </div>
+        </section>
+        END HIDDEN voices -->
+
+        <!-- PART: Contact · email and phone for this edition -->
+        <section id="contact" class="content-section" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>For questions about this edition or about joining a future one.</p>
+          <dl class="programme-facts">
+            <div><dt>Email</dt><dd><a href="mailto:maths.inception@gmail.com">maths.inception@gmail.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+919486707864">94867 07864</a></dd></div>
+          </dl>
+        </section>
+
+        <!-- PART: Other editions · previous and next pages, in programmes.html archive order -->
+        <nav class="content-section" aria-label="Other editions">
+          <p><a href="programme-2025.html"><span aria-hidden="true">←</span> Previous edition: MI2025-DPM Veveaham School</a></p>
+          <p><a href="programme-2026-ppec-bengaluru.html">Next edition: MI2026-BLR PPEC Bengaluru <span aria-hidden="true">→</span></a></p>
+        </nav>
           </div>
         </div>
       </div>
+      <!-- SHARED: Upcoming programmes box · Meghana's component, copied from index.html (edition code written as DPM) -->
       <aside class="home-announcement" aria-labelledby="announcement-title">
         <p class="eyebrow">Upcoming programmes</p>
-        <h2 id="announcement-title">MI2027-01 Veveaham School</h2>
-        <p>Location: Dharapuram, Tamil Nadu</p>
+        <h2 id="announcement-title">MI2027-DPM</h2>
+        <p>Location: Veveaham School, Dharapuram, Tamil Nadu</p>
         <a class="programme-announcements-box" href="programmes.html#upcoming">Programme announcements <span aria-hidden="true">→</span></a>
       </aside>
     </div>
   </main>
 
+  <!-- SHARED: Footer · Meghana's component, same on every programme page -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
