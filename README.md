@@ -97,9 +97,9 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 
 ## Create a programme page from the template
 
-`_templates/mi-programme-page-template.html` is a complete programme page with every section an edition can use. GitHub Pages does not publish folders that start with `_`, so it never appears on the live site. `programme-2026.html` is a finished example.
+`programme-template.html` is a complete programme page with every section an edition can use. It can be viewed at https://mathsinception.github.io/programme-template.html, but no page on the site links to it, and its `robots` tag keeps it out of search results. `programme-2026.html` is a finished example.
 
-1. Copy the template to the site root as `programme-YYYY.html` (or `programme-YYYY-place.html` when a year has two editions).
+1. Copy the template to `programme-YYYY.html` (or `programme-YYYY-place.html` when a year has two editions) and delete its `<meta name="robots">` line, so the new page can appear in search results.
 2. Fill in every `{placeholder}`; `grep -n "{" programme-YYYY.html` shows what is left. Name the edition by its code and venue, for example `MI2026-DPM Veveaham School`.
 3. Keep the sections for the edition's stage, as listed at the top of the template, and their links under "On this page". Sections that are not ready stay inside an HTML comment rather than being published empty.
 4. Add the edition to the archive in `programmes.html`, and update the previous and next links on the neighbouring pages.

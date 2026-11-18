@@ -1,11 +1,12 @@
 <!doctype html>
 <!--
   Programme page template · Mathematical Inception
-  (Not published: GitHub Pages skips folders starting with "_".)
+  Viewable at mathsinception.github.io/programme-template.html for reference only:
+  no page links here, and the robots tag keeps it out of search results.
 
   To make a page
-    1. Copy to the site root as programme-YYYY.html, or programme-YYYY-place.html
-       when a year has two editions.
+    1. Copy to programme-YYYY.html, or programme-YYYY-place.html when a year has
+       two editions, and delete the robots line in <head>.
     2. Fill in every {placeholder}. Check with:  grep -n "{" programme-YYYY.html
     3. Keep the sections for the edition's stage (below) and their "On this page" links.
     4. Add the edition to the archive in programmes.html, and update the
@@ -35,6 +36,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
   <title>MI{YYYY}-{PPP} {venue} | Mathematical Inception Trust</title>
   <meta name="description" content="MI{YYYY}-{PPP}, the {nth} edition of Mathematical Inception: a {n}-day residential mathematics programme at {venue}, {town}, {dates}.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
