@@ -97,13 +97,27 @@ p { margin-bottom: 1.15rem; }
 .home-main { grid-area: main; min-width: 0; }
 .home-announcement { position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid #c3a77a; background: #182f4b; color: #f3ede4; }
 .home-announcement { grid-area: announcement; }
+/* Programme and archive pages · slightly smaller, slightly right-positioned navigation. */
+.page-layout.home-layout > .home-announcement {
+  justify-self: end;
+  width: 180px;
+  margin-right: -.75rem;
+  padding-inline: 1rem;
+}
 .home-announcement .eyebrow { margin-bottom: .8rem; color: #f0d7b4; font-size: .75rem; font-weight: 600; }
 .home-announcement h2 { margin-bottom: .8rem; color: #f3ede4; font-size: clamp(1.3rem, 2vw, 1.65rem); }
 .home-announcement p:not(.eyebrow) { margin-bottom: 1rem; color: #f3ede4; font-size: .9375rem; line-height: 1.6; }
 .home-announcement a, .home-announcement a:hover { color: #f3ede4; }
 .home-announcement a { font-size: .9rem; font-weight: 600; }
-.home-announcement .programme-announcements-box { display: block; margin-top: 1.2rem; padding: .75rem .85rem; border: 1px solid #c3a77a; background: #f3ede4; color: #182f4b; line-height: 1.4; text-decoration: none; }
-.home-announcement .programme-announcements-box:hover { background: #fff; color: #182f4b; }
+.home-announcement .programme-announcements-box { display: block; margin-top: 1.2rem; padding: .75rem .85rem; border: 1px solid #c3a77a; background: #215d8f; color: #fff; line-height: 1.4; text-decoration: none; }
+.home-announcement .programme-announcements-box:hover { background: #2b6da3; color: #fff; }
+.home-announcement .programme-announcements-box strong { display: block; }
+.home-announcement .programme-announcements-box strong a,
+.home-announcement .programme-announcements-box strong a:link,
+.home-announcement .programme-announcements-box strong a:visited,
+.home-announcement .programme-announcements-box strong a:hover,
+.home-announcement .programme-announcements-box strong a:active { color: #fff; }
+.home-announcement .programme-announcements-box .eyebrow { color: #f0d7b4; }
 .sidebar-blocks { display: grid; gap: .75rem; }
 .home-announcement .sidebar-block {
   display: block;
@@ -192,6 +206,9 @@ p { margin-bottom: 1.15rem; }
 .archive-details h3 { margin-bottom: .3rem; }
 .archive-details > p:last-child { color: var(--muted); font-size: .9375rem; margin-bottom: .6rem; }
 .archive-link { justify-self: start; font-size: .9375rem; }
+.past-programmes-page .page-intro { border-bottom: 0; }
+.past-programmes-page .archive-list { border-top: 0; }
+.past-programmes-page .archive-entry { border-bottom: 0; }
 .photo-placeholder { margin: 1.5rem 0 0; }
 .photo-placeholder-frame { display: grid; width: 100%; min-height: 15rem; aspect-ratio: 16 / 9; place-items: center; padding: 1.5rem; border: 1px dashed var(--line); background: var(--wash); color: var(--muted); text-align: center; }
 .photo-placeholder figcaption { margin-top: .6rem; color: var(--muted); font-size: .875rem; }
@@ -233,6 +250,7 @@ p { margin-bottom: 1.15rem; }
 @media (max-width: 900px) {
   .page-layout.home-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "about" "announcement" "main"; align-items: stretch; gap: 0; margin-right: 0; padding-block: 1.5rem 2rem; }
   .home-announcement { position: static; margin-top: 0; margin-right: 0; }
+  .page-layout.home-layout > .home-announcement { justify-self: stretch; width: 100%; margin-right: 0; }
   .brand { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .5rem; }
   .brand-logo-left, .brand-logo-right { width: clamp(70.4px, 16.5vw, 132px); }
   .brand-text { font-size: clamp(1.65rem, 5vw, 2.5rem); }

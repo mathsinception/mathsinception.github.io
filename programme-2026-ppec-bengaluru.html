@@ -1,10 +1,34 @@
 <!doctype html>
+<!--
+  PROGRAMME PAGE: MI2026-BLR PPEC (second edition, completed)
+  Built from programme-template.html. Every part below is marked
+  with a "PART" comment, so it can be found by searching for the words in brackets.
+
+  SHARED WITH THE REST OF THE SITE
+    Site header and logos ........ [site-header]
+    Upcoming programmes box ...... [home-announcement]
+    Footer ....................... [site-footer]
+    Stylesheet version ........... [styles.css?v=]
+
+  THIS EDITION'S CONTENT
+    Browser-tab title, description [<title>]
+    Edition code, title, intro ... [PART: Intro]          id="page-title"
+    "On this page" menu .......... [PART: On this page]   class="page-index"
+    About and key facts .......... [PART: About]          id="overview"
+    What students learned ........ [PART: Programme]      id="programme"
+    The week ..................... [PART: The week]       id="week"
+    Who taught ................... [PART: People]         id="people"
+    Gallery (hidden for now) ..... [HIDDEN until approved MI2026 photos]
+    In their words (hidden) ...... [HIDDEN until MI2026 quotes]
+    Contact ...................... [PART: Contact]        id="contact"
+    Previous / next edition ...... [PART: Other editions] aria-label="Other editions"
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MI2026-02 PPEC Bengaluru | Mathematical Inception Trust</title>
-  <meta name="description" content="MI2026-02 PPEC Bengaluru, the fifth edition of Mathematical Inception, held from 20–24 June 2026.">
+  <title>MI2026-BLR PPEC | Mathematical Inception Trust</title>
+  <meta name="description" content="MI2026-BLR PPEC, the second edition of Mathematical Inception: a five-day residential mathematics programme at PPEC Bengaluru, 20–24 June 2026.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css?v=20261118-3">
@@ -25,38 +49,82 @@
     <div class="page-layout home-layout">
       <div class="home-main">
         <header class="page-intro">
-          <p class="eyebrow">MI2026-02 · Fifth edition</p>
-          <h1 id="page-title">MI2026-02 PPEC Bengaluru</h1>
-          <p class="intro-text">PPEC Bengaluru · 20–24 June 2026</p>
+          <p class="eyebrow">MI2026-BLR PPEC · Second edition</p>
+          <h1 id="page-title">MI2026-BLR PPEC</h1>
+          <p class="intro-text">A five-day residential programme at PPEC Bengaluru, 20–24 June 2026.</p>
         </header>
         <div class="page-layout">
-      <aside class="page-sidebar">
-        <details class="page-index">
-          <summary>On this page</summary>
-          <nav aria-label="On this page">
-            <a href="#overview">About this edition</a>
-            <a href="#photos">Photos</a>
-            <a href="past-programmes.html">All past programmes</a>
-          </nav>
-        </details>
-      </aside>
-      <div class="page-content">
-        <section id="overview" class="content-section" aria-labelledby="overview-title">
-          <p class="section-label">About this edition</p>
-          <h2 id="overview-title">Fifth edition at PPEC Bengaluru</h2>
-          <p>This edition of Mathematical Inception took place at PPEC Bengaluru from 20 to 24 June 2026.</p>
-          <!-- EDIT: Add verified details about this edition here. -->
-        </section>
+          <aside class="page-sidebar">
+            <details class="page-index">
+              <summary>On this page</summary>
+              <nav aria-label="On this page">
+                <a href="#overview">About this edition</a>
+                <a href="#programme">What students learned</a>
+                <a href="#week">The week</a>
+                <a href="#people">Who taught</a>
+                <a href="#contact">Contact</a>
+                <a href="past-programmes.html">All past programmes</a>
+              </nav>
+            </details>
+          </aside>
+          <div class="page-content">
+            <section id="overview" class="content-section" aria-labelledby="overview-title">
+              <h2 id="overview-title">About this edition</h2>
+              <p>Mathematical Inception is a free, residential programme for students who have just completed Class 10. Rather than covering a lot of content, it helps students learn how to think: they work on carefully chosen problems, discuss ideas with one another and learn from mathematicians who explain their reasoning as they go.</p>
+              <p>The second edition was hosted at PPEC Bengaluru, where it was free for every participant.</p>
+              <dl class="programme-facts">
+                <div><dt>Dates</dt><dd>20–24 June 2026</dd></div>
+                <div><dt>Venue</dt><dd>PPEC Bengaluru</dd></div>
+                <div><dt>Format</dt><dd>Fully residential, 5 days</dd></div>
+                <div><dt>Eligibility</dt><dd>Students who completed Class 10 in 2026</dd></div>
+                <div><dt>Fee</dt><dd>Free, including food and accommodation. Students arranged their own travel.</dd></div>
+                <div><dt>Host</dt><dd>PPEC Bengaluru</dd></div>
+              </dl>
+            </section>
 
-        <section id="photos" class="content-section" aria-labelledby="photos-title">
-          <p class="section-label">Gallery</p>
-          <h2 id="photos-title">Moments from MI2026-02 at PPEC Bengaluru</h2>
-          <figure class="photo-placeholder">
-            <div class="photo-placeholder-frame">Add an approved photo from MI2026-02 at PPEC Bengaluru here</div>
-            <figcaption>Add a descriptive caption when you add the photo.</figcaption>
-          </figure>
-          <!-- EDIT: Replace the placeholder with approved photographs and descriptive alt text. -->
-        </section>
+            <section id="programme" class="content-section" aria-labelledby="programme-title">
+              <h2 id="programme-title">What students learned</h2>
+              <p>The mathematics was built up in three stages over the week.</p>
+              <div class="approach-list">
+                <div><span class="approach-number" aria-hidden="true">i.</span><div><h3>Laying foundations</h3><p>Mathematical statements, sets, functions, divisibility, counting and geometry.</p></div></div>
+                <div><span class="approach-number" aria-hidden="true">ii.</span><div><h3>Constructing mathematics</h3><p>Using these foundations to prove selected theorems from Class 11 and 12.</p></div></div>
+                <div><span class="approach-number" aria-hidden="true">iii.</span><div><h3>Creating mathematics</h3><p>Observing patterns, making conjectures and proving them independently.</p></div></div>
+              </div>
+            </section>
+
+            <section id="week" class="content-section" aria-labelledby="week-title">
+              <h2 id="week-title">The week</h2>
+              <p>Each day had four teaching sessions and two discussion sessions, with sports or a cultural event in the evening.</p>
+              <dl class="programme-facts">
+                <div><dt>Day 1 · Sat, 20 June</dt><dd></dd></div>
+                <div><dt>Day 2 · Sun, 21 June</dt><dd></dd></div>
+                <div><dt>Day 3 · Mon, 22 June</dt><dd></dd></div>
+                <div><dt>Day 4 · Tue, 23 June</dt><dd></dd></div>
+                <div><dt>Day 5 · Wed, 24 June</dt><dd></dd></div>
+              </dl>
+            </section>
+
+            <section id="people" class="content-section" aria-labelledby="people-title">
+              <h2 id="people-title">Who taught</h2>
+              <h3>Instructors</h3>
+              <ul></ul>
+              <h3>Guest speakers</h3>
+              <ul></ul>
+            </section>
+
+            <section id="contact" class="content-section" aria-labelledby="contact-title">
+              <h2 id="contact-title">Contact</h2>
+              <p>For questions about this edition or about joining a future one.</p>
+              <dl class="programme-facts">
+                <div><dt>Email</dt><dd><a href="mailto:maths.inception@gmail.com">maths.inception@gmail.com</a></dd></div>
+                <div><dt>Phone</dt><dd><a href="tel:+919486707864">94867 07864</a></dd></div>
+              </dl>
+            </section>
+
+            <nav class="content-section" aria-label="Other editions">
+              <p><a href="programme-2026.html"><span aria-hidden="true">←</span> Previous edition: MI2026-DHPM Veveaham School</a></p>
+              <p><a href="programme-2027-dhpm.html">Next edition: MI2027-DHPM <span aria-hidden="true">→</span></a></p>
+            </nav>
           </div>
         </div>
       </div>
@@ -66,7 +134,7 @@
           <a class="sidebar-block" href="programmes.html#upcoming">Upcoming programmes</a>
           <a class="sidebar-block" href="past-programmes.html">Past programmes</a>
           <a class="sidebar-block" href="student-reflections.html">Feedback</a>
-          <a class="sidebar-block" href="support-us.html">Support us</a>
+          <a class="sidebar-block" href="support-us.html">Support</a>
         </nav>
       </aside>
     </div>
