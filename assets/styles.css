@@ -212,7 +212,9 @@ p { margin-bottom: 1.15rem; }
 .archive-details h3 { margin-bottom: .3rem; }
 .archive-details > p:last-child { color: var(--muted); font-size: .9375rem; margin-bottom: .6rem; }
 .archive-link { justify-self: start; font-size: .9375rem; }
-.past-programmes-page .page-intro { border-bottom: 0; }
+.past-programmes-page .page-intro { padding-block: 1.5rem 0; border-bottom: 0; }
+.past-programmes-page .page-intro h1 { margin-bottom: 0; }
+.past-programmes-page .content-section { padding-top: 1.5rem; }
 .programmes-page .page-intro { padding-bottom: 0; border-bottom: 0; }
 .past-programmes-page .archive-list { border-top: 0; }
 .past-programmes-page .archive-entry { border-bottom: 0; }
