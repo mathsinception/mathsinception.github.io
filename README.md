@@ -40,8 +40,6 @@ The programme page's video tiles link to public YouTube videos and use YouTube-h
 
 The student reflections page contains participant stories and feedback. To add a reflection, copy the existing `<article class="student-story">` in `student-reflections.html` and replace its title, summary and link with approved content.
 
-Pages with section navigation use a native collapsible “On this page” menu. Select the heading to show or hide its section links.
-
 
 
 
@@ -101,7 +99,7 @@ To add photos, replace the `photo-placeholder-frame` in that edition's `photos` 
 
 1. Copy the template to `programme-YYYY.html` (or `programme-YYYY-place.html` when a year has two editions) and delete its `<meta name="robots">` line, so the new page can appear in search results.
 2. Fill in every `{placeholder}`; `grep -n "{" programme-YYYY.html` shows what is left. Name the edition by its code and venue, for example `MI2026-DPM Veveaham School`.
-3. Keep the sections for the edition's stage, as listed at the top of the template, and their links under "On this page". Sections that are not ready stay inside an HTML comment rather than being published empty.
+3. Keep the sections for the edition's stage, as listed at the top of the template. Sections that are not ready stay inside an HTML comment rather than being published empty.
 4. Add the edition to the archive in `programmes.html`, and update the previous and next links on the neighbouring pages.
 
 ### Edition codes
@@ -124,7 +122,6 @@ A new place gets a new three-letter code, added to this table. Codes are never c
 | Footer (shared) | `site-footer` |
 | Browser-tab title and search description | `<title>` and `name="description"` |
 | Edition code, title and one-line summary | `page-intro` |
-| "On this page" menu | `page-index` |
 | About and key facts | `id="overview"` |
 | Who can apply (upcoming editions) | `id="apply"` |
 | What students learn | `id="programme"` |

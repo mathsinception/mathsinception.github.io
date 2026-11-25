@@ -151,18 +151,6 @@ p { margin-bottom: 1.15rem; }
 
 /* CONTENT */
 .page-layout { display: grid; grid-template-columns: minmax(0, 1fr); }
-.page-sidebar { padding-top: 1.5rem; }
-.page-index { width: fit-content; max-width: 100%; }
-.page-index summary { display: inline-flex; align-items: center; gap: .6rem; padding: .45rem .75rem; border: 1px solid var(--line); color: var(--navy); cursor: pointer; font-size: .9rem; list-style: none; }
-.page-index summary::-webkit-details-marker { display: none; }
-.page-index summary::after { content: "▾"; color: var(--blue); font-size: .8rem; }
-.page-index[open] summary::after { content: "▴"; }
-.page-index summary:hover { background: var(--wash); }
-.page-index summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
-.page-index nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; padding: .8rem .75rem; border: 1px solid var(--line); border-top: 0; }
-.page-index nav a { color: var(--muted); font-size: .875rem; text-decoration: none; }
-.page-index nav a:hover { color: var(--blue); text-decoration: underline; }
-.sidebar-note { margin-top: 3.75rem; font-family: var(--serif); font-size: 1.3rem; line-height: 1.65; color: var(--muted); }
 .page-content { min-width: 0; }
 .content-section { padding-block: 3rem; border-bottom: 1px solid var(--line); scroll-margin-top: 1.5rem; }
 .programmes-page #the-workshop { padding-top: 0; }
@@ -273,8 +261,6 @@ p { margin-bottom: 1.15rem; }
   .page-intro h1 { font-size: clamp(1.8rem, 8vw, 2.35rem); text-wrap: balance; }
   .page-layout { grid-template-columns: 1fr; gap: 0; }
   .video-grid { grid-template-columns: 1fr; }
-  .page-sidebar { padding-block: 1.25rem; }
-  .page-index nav { gap: .5rem 1rem; }
   .sidebar-note { display: none; }
   .content-section { padding-block: 2.5rem; }
   .programme-facts { gap: 1rem; }
@@ -300,7 +286,7 @@ p { margin-bottom: 1.15rem; }
 @media print {
   body { color: #000; font-size: 11pt; }
   .container { width: 100%; }
-  .main-nav, .page-sidebar, .skip-link, .footer-inner > a { display: none; }
+  .main-nav, .skip-link, .footer-inner > a { display: none; }
   .page-layout { display: block; }
   .home-intro { padding-block: 1.5rem; }
   .content-section { padding-block: 1.5rem; break-inside: avoid; }
