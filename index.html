@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/header-logo.png" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="assets/styles.css?v=20261127-8">
+  <link rel="stylesheet" href="assets/styles.css?v=20261127-21">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -22,8 +22,25 @@
       <a class="brand" href="index.html" aria-label="Mathematical Inception Trust home">
         <img class="brand-logo brand-logo-left" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
         <h1 id="page-title" class="brand-text">Mathematical<br>Inception<br>Trust</h1>
-        <img class="brand-logo brand-logo-right" src="assets/header-logo.png" width="200" height="200" alt="" fetchpriority="high">
       </a>
+      <div class="header-tools">
+        <form class="site-search" role="search" aria-label="Search this website" action="https://www.google.com/search" method="get">
+          <input type="search" name="q" aria-label="Search this website" placeholder="Search..." required>
+          <input type="hidden" name="sitesearch" value="mathsinception.github.io">
+          <button type="submit">Search</button>
+        </form>
+        <div class="social-icons" role="group" aria-label="Social media">
+          <span class="social-symbol" role="img" aria-label="LinkedIn">in</span>
+          <span class="social-symbol social-facebook" role="img" aria-label="Facebook">f</span>
+          <span class="social-symbol" role="img" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
+              <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -35,22 +52,33 @@
           <p>The Mathematical Inception Trust comprises of a group which believes that a large country such as ours needs as many resources as possible to help improve mathematical competence and critical thinking across its vast expanse. This Trust has been established to play a small role in this effort. It owes an intellectual and philosophical debt to the <a href="https://mtts.org.in/">Mathematical Training &amp; Talent Search (MTTS) Programme</a>, on which its current activities are modelled. While the MTTS activities are focussed at students at a higher level, our target audience so far has been high school students.</p>
         </section>
 
-        <div class="home-sidebar-area">
+        <div class="header-tools mobile-header-tools">
           <form class="site-search" role="search" aria-label="Search this website" action="https://www.google.com/search" method="get">
-            <input type="search" name="q" aria-label="Search this website" placeholder="Search this site" required>
+            <input type="search" name="q" aria-label="Search this website" placeholder="Search..." required>
             <input type="hidden" name="sitesearch" value="mathsinception.github.io">
             <button type="submit">Search</button>
           </form>
-
-          <aside class="home-announcement" aria-label="Explore the Trust">
-            <nav class="sidebar-blocks">
-              <a class="sidebar-block" href="programmes.html#upcoming">MI camps</a>
-              <a class="sidebar-block" href="past-programmes.html">Past programmes</a>
-              <a class="sidebar-block" href="student-reflections.html">Programme feedback</a>
-              <a class="sidebar-block" href="support-us.html">Support</a>
-            </nav>
-          </aside>
+          <div class="social-icons" role="group" aria-label="Social media">
+            <span class="social-symbol" role="img" aria-label="LinkedIn">in</span>
+            <span class="social-symbol social-facebook" role="img" aria-label="Facebook">f</span>
+            <span class="social-symbol" role="img" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
+                <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"></circle>
+              </svg>
+            </span>
+          </div>
         </div>
+
+        <aside class="home-announcement" aria-label="Explore the Trust">
+          <nav class="sidebar-blocks">
+            <a class="sidebar-block" href="programmes.html#upcoming">MI camps</a>
+            <a class="sidebar-block" href="past-programmes.html">Past programmes</a>
+            <a class="sidebar-block" href="student-reflections.html">Programme feedback</a>
+            <a class="sidebar-block" href="support-us.html">Support</a>
+          </nav>
+        </aside>
       </div>
 
       <div class="home-main">
@@ -126,6 +154,6 @@
       <div class="footer-contact">Contact: <a href="mailto:maths.inception@gmail.com">maths.inception@gmail.com</a></div>
     </div>
   </footer>
-  <script src="assets/search-suggestions.js" defer></script>
+  <script src="assets/search-suggestions.js?v=20261127-2" defer></script>
 </body>
 </html>

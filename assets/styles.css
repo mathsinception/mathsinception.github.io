@@ -89,12 +89,26 @@ p { margin-bottom: 1.15rem; }
 .brand-logo-right { grid-column: 3; justify-self: end; }
 .brand-logo-left, .brand-logo-right { width: clamp(154px, 17.6vw, 242px); }
 .brand-text { grid-column: 2; justify-self: center; margin: 0; color: #fff; font-family: "Chalkduster", "Fredericka the Great", fantasy; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; letter-spacing: .025em; line-height: 1.15; text-align: center; text-transform: uppercase; }
-.home-sidebar-area { grid-area: announcement; position: sticky; top: 1.5rem; display: grid; align-self: flex-start; gap: .75rem; min-width: 0; }
-.site-search { display: flex; align-self: flex-start; gap: .5rem; width: min(100%, 22rem); }
-.site-search input[type="search"] { flex: 1; min-width: 0; padding: .55rem .75rem; border: 1px solid #c3a77a; border-radius: 2px; background: #fff; color: var(--ink); font: inherit; line-height: 1.4; }
-.site-search button { display: none; padding: .55rem .9rem; border: 1px solid #c3a77a; border-radius: 2px; background: #c3a77a; color: var(--navy); font: inherit; font-weight: 600; cursor: pointer; }
+.header-tools { display: flex; flex-direction: column; align-items: flex-end; gap: .25rem; width: 100%; }
+.site-search { display: flex; gap: .5rem; width: min(100%, 8rem); }
+.site-search input[type="search"] { flex: 1; min-width: 0; padding: .4rem .75rem; border: 1px solid #c3a77a; border-radius: 2px; background: transparent; color: #f3ede4; font: inherit; line-height: 1.4; }
+.site-search input[type="search"]::placeholder { color: #c3a77a; opacity: 1; }
+.site-search button { display: none; padding: .4rem .9rem; border: 1px solid #c3a77a; border-radius: 2px; background: #c3a77a; color: var(--navy); font: inherit; font-weight: 600; cursor: pointer; }
 .site-search input[type="search"]:not(:placeholder-shown) ~ button { display: block; }
 .site-search input:focus-visible, .site-search button:focus-visible { outline: 3px solid #f0d7b4; outline-offset: 3px; }
+.social-icons { display: flex; align-items: center; gap: .4rem; color: #f0d7b4; }
+.social-symbol { display: grid; width: 1.75rem; height: 1.75rem; place-items: center; border: 1px solid #c3a77a; border-radius: 50%; font-size: .85rem; font-weight: 700; line-height: 1; }
+.social-facebook { font-family: Arial, sans-serif; font-size: 1.1rem; }
+.social-symbol svg { display: block; width: 1rem; height: 1rem; }
+.home-page .header-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.home-page .brand { display: flex; flex: 1 1 auto; align-items: flex-start; gap: clamp(1rem, 2.5vw, 2rem); width: auto; }
+.home-page .brand-logo-left { flex: 0 0 auto; width: clamp(156px, 20vw, 240px); transform: translateY(clamp(-1cm, -4vw, -1rem)); }
+.home-page .brand-text { font-size: clamp(2rem, 4vw, 3rem); text-align: center; }
+.home-page .header-tools { flex: 0 0 8rem; align-items: stretch; width: 8rem; }
+.home-page .social-icons { align-self: flex-end; }
+.home-page .header-tools:has(.site-search input[type="search"]:not(:placeholder-shown)) { flex-basis: 16rem; width: 16rem; }
+.home-page .header-tools:has(.site-search input[type="search"]:not(:placeholder-shown)) .site-search { width: min(100%, 16rem); }
+.mobile-header-tools { display: none; }
 .main-nav { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 2rem; row-gap: .5rem; }
 .main-nav a { padding-block: .35rem; color: #fff; text-decoration: none; font-size: .9375rem; }
 .main-nav a:hover { color: #f0d7b4; }
@@ -108,7 +122,7 @@ p { margin-bottom: 1.15rem; }
 .home-main { grid-area: main; min-width: 0; }
 .home-announcement { position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid #c3a77a; background: #182f4b; color: #f3ede4; }
 .page-layout.home-layout > .home-announcement { grid-area: announcement; }
-.home-sidebar-area > .home-announcement { position: static; margin-top: 0; }
+.home-intro > .home-announcement { grid-area: announcement; }
 /* Programme and archive pages · slightly smaller, slightly right-positioned navigation. */
 .page-layout.home-layout > .home-announcement {
   justify-self: end;
@@ -248,6 +262,14 @@ p { margin-bottom: 1.15rem; }
 @media (min-width: 1241px) {
   .page-layout.home-layout { margin-right: calc(580px + 1cm - 50vw); }
 }
+@media (min-width: 901px) {
+  .home-page .brand-text { margin-inline: auto; }
+  .home-page .header-inner {
+    padding-top: calc(clamp(2rem, 4vw, 3.75rem) - .25cm);
+    padding-bottom: max(0px, calc(clamp(2rem, 4vw, 3.75rem) - 1.25cm));
+  }
+  .home-page .brand-logo-left { transform: translateY(calc(clamp(-1cm, -4vw, -1rem) + .25cm)); }
+}
 @media (max-width: 1240px) and (min-width: 1001px) {
   .page-layout.home-layout { margin-right: calc(1cm - 2.5rem); }
 }
@@ -255,17 +277,26 @@ p { margin-bottom: 1.15rem; }
   .page-layout.home-layout { margin-right: 14px; }
 }
 @media (max-width: 900px) {
-  .page-layout.home-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "about" "announcement" "main"; align-items: stretch; gap: 0; margin-right: 0; padding-block: 1.5rem 2rem; }
-  .home-sidebar-area { position: static; }
+  .page-layout.home-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "about" "home-tools" "announcement" "main"; align-items: stretch; gap: 0; margin-right: 0; padding-block: 1.5rem 2rem; }
   .home-announcement { position: static; margin-top: 0; margin-right: 0; }
   .page-layout.home-layout > .home-announcement { justify-self: stretch; width: 100%; margin-right: 0; }
   .brand { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .5rem; }
   .brand-logo-left, .brand-logo-right { width: clamp(70.4px, 16.5vw, 132px); }
   .brand-text { font-size: clamp(1.65rem, 5vw, 2.5rem); }
+  .home-page .header-inner { flex-direction: column; align-items: stretch; gap: .75rem; }
+  .home-page .brand { flex: none; align-items: flex-start; gap: .75rem; width: 100%; }
+  .home-page .brand-logo-left { width: clamp(88px, 22vw, 156px); }
+  .home-page .brand-text { font-size: clamp(1.3rem, 5vw, 2rem); }
+  .home-page .header-tools { flex: none; align-items: center; width: 100%; }
+  .home-page .social-icons { align-self: auto; }
+  .home-page .header-tools:has(.site-search input[type="search"]:not(:placeholder-shown)) { flex: none; width: min(100%, 16rem); }
+  .home-page .header-inner > .header-tools { display: none; }
+  .home-page .mobile-header-tools { display: flex; grid-area: home-tools; margin-block: .5rem; }
+  .home-page .home-intro > .home-announcement { justify-self: center; width: min(100%, 20rem); }
 }
 @media (max-width: 760px) {
   .header-inner { gap: .5rem; padding-block: 1.25rem; }
-  .site-search { align-self: center; }
+  .header-tools { align-items: center; }
   .brand-text { font-size: clamp(1.3rem, 5vw, 2rem); }
   .main-nav { gap: .5rem 2rem; }
   .main-nav a { padding-block: .45rem; }

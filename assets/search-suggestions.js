@@ -1,7 +1,9 @@
-const searchForm = document.querySelector(".site-search");
-const searchInput = searchForm?.querySelector('input[type="search"]');
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (searchInput && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+document.querySelectorAll(".site-search").forEach((searchForm) => {
+  const searchInput = searchForm.querySelector('input[type="search"]');
+  if (!searchInput || prefersReducedMotion) return;
+
   const suggestions = ["MI Camps", "Student feedback"];
   let suggestionIndex = 0;
   let characterIndex = 0;
@@ -41,11 +43,11 @@ if (searchInput && !window.matchMedia("(prefers-reduced-motion: reduce)").matche
 
   searchForm.addEventListener("mouseleave", () => {
     window.clearTimeout(animationId);
-    searchInput.placeholder = "Search this site";
+    searchInput.placeholder = "Search...";
   });
 
   searchInput.addEventListener("focus", () => {
     window.clearTimeout(animationId);
-    searchInput.placeholder = "Search this site";
+    searchInput.placeholder = "Search...";
   });
-}
+});
