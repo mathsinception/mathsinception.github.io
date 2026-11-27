@@ -89,6 +89,12 @@ p { margin-bottom: 1.15rem; }
 .brand-logo-right { grid-column: 3; justify-self: end; }
 .brand-logo-left, .brand-logo-right { width: clamp(154px, 17.6vw, 242px); }
 .brand-text { grid-column: 2; justify-self: center; margin: 0; color: #fff; font-family: "Chalkduster", "Fredericka the Great", fantasy; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; letter-spacing: .025em; line-height: 1.15; text-align: center; text-transform: uppercase; }
+.home-sidebar-area { grid-area: announcement; position: sticky; top: 1.5rem; display: grid; align-self: flex-start; gap: .75rem; min-width: 0; }
+.site-search { display: flex; align-self: flex-start; gap: .5rem; width: min(100%, 22rem); }
+.site-search input[type="search"] { flex: 1; min-width: 0; padding: .55rem .75rem; border: 1px solid #c3a77a; border-radius: 2px; background: #fff; color: var(--ink); font: inherit; line-height: 1.4; }
+.site-search button { display: none; padding: .55rem .9rem; border: 1px solid #c3a77a; border-radius: 2px; background: #c3a77a; color: var(--navy); font: inherit; font-weight: 600; cursor: pointer; }
+.site-search input[type="search"]:not(:placeholder-shown) ~ button { display: block; }
+.site-search input:focus-visible, .site-search button:focus-visible { outline: 3px solid #f0d7b4; outline-offset: 3px; }
 .main-nav { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; column-gap: 2rem; row-gap: .5rem; }
 .main-nav a { padding-block: .35rem; color: #fff; text-decoration: none; font-size: .9375rem; }
 .main-nav a:hover { color: #f0d7b4; }
@@ -101,7 +107,8 @@ p { margin-bottom: 1.15rem; }
 #about { grid-area: about; }
 .home-main { grid-area: main; min-width: 0; }
 .home-announcement { position: sticky; top: 1.5rem; align-self: flex-start; min-width: 0; margin-top: 1.5rem; padding: 1.25rem 1.1rem; border-top: 4px solid #c3a77a; background: #182f4b; color: #f3ede4; }
-.home-announcement { grid-area: announcement; }
+.page-layout.home-layout > .home-announcement { grid-area: announcement; }
+.home-sidebar-area > .home-announcement { position: static; margin-top: 0; }
 /* Programme and archive pages · slightly smaller, slightly right-positioned navigation. */
 .page-layout.home-layout > .home-announcement {
   justify-self: end;
@@ -162,6 +169,8 @@ p { margin-bottom: 1.15rem; }
 .programme-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; margin-block: 1.75rem; }
 .programme-facts dt { font-size: .875rem; color: var(--muted); margin-bottom: .45rem; }
 .programme-facts dd { margin: 0; font-size: .9375rem; color: var(--navy); line-height: 1.6; }
+.contact-details { display: grid; gap: .5rem; margin: 1.75rem 0 0; padding: 0; list-style: none; }
+.contact-details strong { color: var(--navy); }
 .section-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; align-items: center; }
 .section-links > a:not(.text-link) { font-size: .9375rem; }
 .approach-list { display: grid; gap: 1.5rem; margin-top: 1.75rem; }
@@ -246,6 +255,7 @@ p { margin-bottom: 1.15rem; }
 }
 @media (max-width: 900px) {
   .page-layout.home-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "about" "announcement" "main"; align-items: stretch; gap: 0; margin-right: 0; padding-block: 1.5rem 2rem; }
+  .home-sidebar-area { position: static; }
   .home-announcement { position: static; margin-top: 0; margin-right: 0; }
   .page-layout.home-layout > .home-announcement { justify-self: stretch; width: 100%; margin-right: 0; }
   .brand { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .5rem; }
@@ -254,6 +264,7 @@ p { margin-bottom: 1.15rem; }
 }
 @media (max-width: 760px) {
   .header-inner { gap: .5rem; padding-block: 1.25rem; }
+  .site-search { align-self: center; }
   .brand-text { font-size: clamp(1.3rem, 5vw, 2rem); }
   .main-nav { gap: .5rem 2rem; }
   .main-nav a { padding-block: .45rem; }

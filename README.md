@@ -1,6 +1,6 @@
 # Mathematical Inception Trust — website editing guide
 
-A small, independent website made with **plain HTML and CSS**. You can edit every part in VS Code. There is no framework, JavaScript, package installation, build command, database, paid template, or external font dependency. The website works by opening `index.html` in a browser. 
+A small, independent website made with **plain HTML and CSS**, with a small JavaScript enhancement for homepage search suggestions. You can edit every part in VS Code. There is no framework, package installation, build command, database, paid template, or external font dependency. The website works by opening `index.html` in a browser.
 
 ## Start here
 
@@ -17,6 +17,7 @@ The ZIP places website files at its root. In the hosted project's source checkou
 | What you want to change | File | What to search for |
 | --- | --- | --- |
 | Homepage introduction and mission | `index.html` | `Homepage introduction` or `id="about"` |
+| Homepage search suggestions | `assets/search-suggestions.js` | `suggestions` |
 | Programme differences | `programmes.html` | `id="our-programmes"` |
 | Learning approach in the programme | `programmes.html` | `id="our-approach"` |
 | Trust members, affiliations and roles | `index.html` | `id="trustees"` |
