@@ -166,6 +166,7 @@ p { margin-bottom: 1.15rem; }
 .what-we-are-not-label { margin-bottom: .35rem; color: var(--muted); font-family: var(--sans); font-size: 1rem; font-weight: 600; line-height: 1.5; }
 .content-section { border-color: #d4dbe0; }
 .content-section > h2 { color: #3e454b; font-size: clamp(1.35rem, 2.2vw, 1.8rem); letter-spacing: .04em; text-transform: uppercase; }
+.home-page .content-section > h2 { text-decoration: underline; text-decoration-color: #c3a77a; text-decoration-thickness: 2px; text-underline-offset: .25em; }
 .programme-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; margin-block: 1.75rem; }
 .programme-facts dt { font-size: .875rem; color: var(--muted); margin-bottom: .45rem; }
 .programme-facts dd { margin: 0; font-size: .9375rem; color: var(--navy); line-height: 1.6; }
