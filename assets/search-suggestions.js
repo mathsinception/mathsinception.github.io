@@ -43,7 +43,7 @@ document.querySelectorAll(".site-search").forEach((searchForm) => {
 
   searchForm.addEventListener("mouseleave", () => {
     window.clearTimeout(animationId);
-    searchInput.placeholder = "Search...";
+    searchInput.placeholder = " ";
   });
 
   searchInput.addEventListener("focus", () => {
